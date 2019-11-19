@@ -1,6 +1,7 @@
 #include "game.h"
 
-/* 함 수 ** 구 현 */
+//ignore 파일 추가
+/* 함 수  구 현 */
 
 int keyControl()
 {
