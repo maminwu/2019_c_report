@@ -50,7 +50,7 @@ void Check(int checknum)
 			switch (n)
 			{
 			case UP: {
-				if (y > 7) //계속 못올라가게
+				if (y > 7) //계속 못올라가게.
 				{
 					gotoxy(x - 2, y); //'>'을 두칸 이전에 출력하려고
 					printf(" "); //원래 위치 지우기
