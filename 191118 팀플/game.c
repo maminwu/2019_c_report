@@ -1,6 +1,6 @@
 #include "game.h"
 
-//정민우가 만든 커밋 테스트
+//정길연이 만든 커밋 테스트
 /* 함 수 구 현 */
 
 int keyControl()
