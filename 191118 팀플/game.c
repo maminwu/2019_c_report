@@ -1,6 +1,6 @@
 #include "game.h"
 
-//
+
 /* 함 수 구 현 */
 
 int keyControl()
