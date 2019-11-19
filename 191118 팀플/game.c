@@ -2,7 +2,6 @@
 
 
 /* 함 수 구 현 */
-//testaa
 
 int keyControl()
 {
