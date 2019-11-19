@@ -1,6 +1,6 @@
 #include "game.h"
 
-//정길연이 만든 커밋 테스트
+
 /* 함 수 구 현 */
 
 int keyControl()
@@ -26,12 +26,12 @@ void titleDraw(void)
 	int x = 10; //타이틀 표시 x좌표test
 	int y = 20; //타이틀 표시 y좌표
 
-	gotoxy(x, y + 0); printf("ooo        ooooo        .o.       ooooooooooooo  ooooo   ooooo            .oooooo.          .o.        ooo        ooooo  oooooooooooo"); Sleep(100);
+	gotoxy(x, y + 0); printf("ooo        ooooo        .o.       ooooooooooooo  ooooo   ooooo            .oooooo.          .o.        ooo        ooooo  ooooooooooo8"); Sleep(100);
 	gotoxy(x, y + 1); printf("`88.       .888'       .888.      8'   888   `8  `888'   `888'           d8P'  `Y8b        .888.       `88.       .888'  `888'     `8"); Sleep(100);
 	gotoxy(x, y + 2); printf(" 888b     d'888       .8'888.          888        888     888           888               .8'888.       888b     d'888    888 "); Sleep(100);
 	gotoxy(x, y + 3); printf(" 8 Y88. .P  888      .8' `888.         888        888ooooo888           888   ooooo      .8' `888.      8 Y88. .P  888    888ooooo8 "); Sleep(100);
 	gotoxy(x, y + 4); printf(" 8 `888'    888    .88oooo8888.        888        888     888           888      88     .88oooo8888.    8  `888'   888    888    "); Sleep(100);
-	gotoxy(x, y + 5); printf(" 8   Y      888   .8o'     `888.       888        888     888           `88.    .88'   .8o'     `888.   8    Y     888    888       o "); Sleep(100);
+	gotoxy(x, y + 5); printf(" 8   Y      888   .8o'     `888.       888        888     888           `88.    .88'   .8o'     `888.   8    Y     888    888       8 "); Sleep(100);
 	gotoxy(x, y + 6); printf("o8o        o888o  o88o     o8888o     o888o      o888o   o888o           `Y8bood8P'   o88o     o8888o  o8o        o888o  o888ooooood8 "); Sleep(100);
 }
 int menuDraw(void)
@@ -41,7 +41,7 @@ int menuDraw(void)
 	int x = 70;
 	int y = 32;
 
-	gotoxy(x - 2, y); printf("> 게임 시작999"); //-2하는 이유는 >을 넣어야되서
+	gotoxy(x - 2, y); printf("> 게임 시작"); //-2하는 이유는 >을 넣어야되서
 	gotoxy(x, y + 1); printf("게임 정보");
 	gotoxy(x, y + 2); printf("순위 보기");
 	gotoxy(x, y + 3); printf("게임 종료");

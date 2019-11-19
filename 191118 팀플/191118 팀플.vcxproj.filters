@@ -27,6 +27,9 @@
     <ClCompile Include="math_round.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="math_sol.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -39,6 +42,9 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="math_round.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="math_sol.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>

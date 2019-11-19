@@ -1,15 +1,5 @@
 #include "main.h"
-void Check(int checknum) {
-	if (checknum == 0) {
-		printf("\n다시 하기");
-		printf("\n풀기 보기\n");
-		system("PAUSE");
-	}else if (checknum == 1) {
-		printf("\n넘어가기");
-		printf("\n풀기 보기\n");
-		system("PAUSE");
-	}
-}
+
 
 int main()
 {
