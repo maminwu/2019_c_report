@@ -15,7 +15,7 @@ int keyControl()
 		return DOWN;
 	else if (temp == 'd' || temp == 'D')
 		return RIGHT;
-	else if (temp == ' ') //스페이스바가 선택버튼
+	else if (temp == ' ') // 스페이스바가 선택버튼
 		return SUBMIT;
 }
 
