@@ -22,7 +22,7 @@ int keyControl()
 void titleDraw(void)
 {
 	system("cls");
-	int x = 10; //타이틀 표시 x좌표
+	int x = 10; //타이틀 표시 x좌표test
 	int y = 20; //타이틀 표시 y좌표
 
 	gotoxy(x, y + 0); printf("ooo        ooooo        .o.       ooooooooooooo  ooooo   ooooo            .oooooo.          .o.        ooo        ooooo  oooooooooooo"); Sleep(100);
@@ -40,7 +40,7 @@ int menuDraw(void)
 	int x = 70;
 	int y = 32;
 
-	gotoxy(x - 2, y); printf("> 게임 시작"); //-2하는 이유는 >을 넣어야되서
+	gotoxy(x - 2, y); printf("> 게임 시작999"); //-2하는 이유는 >을 넣어야되서
 	gotoxy(x, y + 1); printf("게임 정보");
 	gotoxy(x, y + 2); printf("순위 보기");
 	gotoxy(x, y + 3); printf("게임 종료");
