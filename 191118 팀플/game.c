@@ -1,5 +1,6 @@
 #include "game.h"
 
+//gitignore 파일 추가 커밋
 /* 함 수 구 현 */
 
 int keyControl()
