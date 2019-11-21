@@ -31,7 +31,7 @@ void First_Round()
 	int divide = rand() % 9 + 1; //나누는 수
 	int truenum;
 
-	float ans, fact; //정답, 입력된 값
+	float ans, sol; //정답, 입력된 값
 
 
 	printf("1단계 문제 :  ");
@@ -39,14 +39,14 @@ void First_Round()
 	printf("' (%d × %d) ÷ %d ' 을 구하시오 : ", f_multiply, s_multiply, divide);
 	scanf("%f", &ans);
 
-	fact = ((f_multiply * s_multiply) / (divide * 1.0)); //1.0f를 곱해야 소수점까지 계산 가능
+	sol = ((f_multiply * s_multiply) / (divide * 1.0)); //1.0f를 곱해야 소수점까지 계산 가능
 
-	fact = (int)(fact * 100);
-	fact = fact / 100;
+	sol = (int)(sol * 100);
+	sol = sol / 100;
 
 	//printf("내가 적은 답 %f\n", answer); 값 확인
 	
-	truenum = right(ans, fact);
+	truenum = right(ans, sol);
 	return truenum;
 
 }
@@ -57,7 +57,7 @@ void Second_Round()
 
 	int number = rand() % 7; //0~6까지의 랜덤 수
 	int ans; //사용자가 입력하는 답
-	int fact = 1; //정답
+	int sol = 1; //정답
 	int truenum;
 
 	printf("2단계 문제 :\n");
@@ -66,14 +66,14 @@ void Second_Round()
 
 	if (number == 0)
 	{
-		fact = 1;
+		sol = 1;
 		return 0;
 	}
 	for (int i = 1; i <= number; i++)
 	{
-		fact *= i;
+		sol *= i;
 	}
-	truenum = right(ans, fact);
+	truenum = right(ans, sol);
 	return truenum;
 
 }
@@ -110,5 +110,7 @@ void Third_Round()
 			return truenum;
 			system("PAUSE");
 		}
+		truenum = right(ans[i], sol[i]);
+		return truenum;
 	}
 }
