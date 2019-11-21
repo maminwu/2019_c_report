@@ -20,6 +20,10 @@ int main()
 			trueorfalse = Second_Round(); //2단계 게임
 			Check(trueorfalse);
 
+			trueorfalse = Third_Round(); //3단계 게임
+			Check(trueorfalse);
+
+
 		}
 		else if (menuCode == 1)
 			infoDraw(); //게임정보

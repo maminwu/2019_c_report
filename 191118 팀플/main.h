@@ -19,6 +19,20 @@
 
 #endif
 
+#ifndef __MATH_H__
+#define __MATH_H__
+
+#include <math.h>
+
+#endif
+
+#ifndef __CONIO_H__
+#define __CONIO_H__
+
+#include <CONIO.h>
+
+#endif
+
 #ifndef _TIME_H__
 #define _TIME_H__
 

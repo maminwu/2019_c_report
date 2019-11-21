@@ -9,9 +9,9 @@ int keyControl()
 
 	if (temp == 'w' || temp == 'W')
 		return UP;
-	else if (temp == 'a' || temp == 'A')
+	else if (temp == 'a' || temp == 'A') 
 		return LEFT;
-	else if (temp == 's' || temp == 'S')
+	else if (temp == 's' || temp == 'S' || temp == 'ㄴ')
 		return DOWN;
 	else if (temp == 'd' || temp == 'D')
 		return RIGHT;
@@ -80,6 +80,7 @@ int menuDraw(void)
 
 
 }
+
 
 
 int new_name(int x, int y) //사용자이름 입력
