@@ -113,4 +113,10 @@ void Third_Round()
 		truenum = right(ans[i], sol[i]);
 		return truenum;
 	}
+
+}
+
+void Forth_Round()
+{
+
 }
