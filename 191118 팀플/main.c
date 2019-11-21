@@ -12,7 +12,7 @@ int main()
 
 		if (menuCode == 0)
 		{
-			new_name(0,0);
+			new_name(0,0); 
 			 
 			trueorfalse = First_Round(); //1단계 게임
 			Check(trueorfalse);
@@ -20,9 +20,8 @@ int main()
 			trueorfalse = Second_Round(); //2단계 게임
 			Check(trueorfalse);
 
-			trueorfalse = Third_Round(); //3단계 게임
+			trueorfalse = Third_Round(); //2단계 게임
 			Check(trueorfalse);
-
 
 		}
 		else if (menuCode == 1)
