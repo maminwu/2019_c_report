@@ -51,6 +51,7 @@ void Second_Round()
 	int number = rand() % 7; //0~6까지의 랜덤 수
 	int ans; //사용자가 입력하는 답
 	int fact = 1; //정답
+	int truenum;
 
 	printf("2단계 문제 :\n");
 	printf("'%d! '을 구하시오 : ", number);
@@ -68,25 +69,51 @@ void Second_Round()
 
 	if (fact == ans)
 	{
-		printf("\n정답입니다.");
+		printf("정답입니다.\n");
+		truenum = 1;
+		return truenum;
+		system("PAUSE");
 	}
 	else
 	{
-		printf("\n오답입니다.");
+		printf("오답입니다.\n");
+		truenum = 0;
+		return truenum;
+		system("PAUSE");
 	}
 }
+
 void Third_Round()
 {
-	
-}
-int get_line_parameter(int x1, int y1, int x2, int y2, float* slope, float* yintercept)
-{
-	if (x1 == x2)
-		return -1;
-	else
+	system("cls");
+	srand(time(NULL)); //랜덤 시드값
+	float s, y;
+	int x1=1, x2=3, y1=7, y2=11;
+	char ans[100];
+	char sol[100];
+	int truenum;
+
+	printf("3단계 문제 :\n");
+	printf("(%d,%d), (%d,%d)을 지나는 일차함수를 구하시오. : ('y=ax+b' 의꼴) ", x1, y1, x2, y2);
+
+	scanf("%s", ans);
+	sol[10] ="y=2x+5";
+
+	for (int i = 0; i < 10; i++)
 	{
-		*slope = (float)(y2 - y1) / (float)(x2 - x1);
-		*yintercept = y1 - (*slope) * x1;
-		return 0;
+		if (ans[i] != sol[i])
+		{
+			printf("오답입니다.\n");
+			truenum = 0;
+			return truenum;
+			system("PAUSE");
+		}
+		else if (ans[i] == sol[i])
+		{
+			printf("정답입니다.\n");
+			truenum = 1;
+			return truenum;
+			system("PAUSE");
+		}
 	}
 }
