@@ -17,5 +17,6 @@
 int keyControl();
 void titleDraw(void); //타이틀
 int menuDraw(void); //메인메뉴
-void user(void); //사용자이름입력
 void infoDraw();
+int new_name(int x, int y);
+

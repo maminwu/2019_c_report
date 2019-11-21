@@ -1,6 +1,5 @@
 #include "game.h"
 
-
 /* 함 수 구 현 */
 
 int keyControl()
@@ -23,16 +22,18 @@ int keyControl()
 void titleDraw(void)
 {
 	system("cls");
-	int x = 10; //타이틀 표시 x좌표test
+	int x = 10; //타이틀 표시 x좌표
 	int y = 20; //타이틀 표시 y좌표
 
-	gotoxy(x, y + 0); printf("ooo        ooooo        .o.       ooooooooooooo  ooooo   ooooo            .oooooo.          .o.        ooo        ooooo  ooooooooooo8"); Sleep(100);
+	gotoxy(x, y + 0); printf("ooo        ooooo        .o.       ooooooooooooo  ooooo   ooooo            .oooooo.          .o.        ooo        ooooo  oooooooooooo"); Sleep(100);
 	gotoxy(x, y + 1); printf("`88.       .888'       .888.      8'   888   `8  `888'   `888'           d8P'  `Y8b        .888.       `88.       .888'  `888'     `8"); Sleep(100);
 	gotoxy(x, y + 2); printf(" 888b     d'888       .8'888.          888        888     888           888               .8'888.       888b     d'888    888 "); Sleep(100);
 	gotoxy(x, y + 3); printf(" 8 Y88. .P  888      .8' `888.         888        888ooooo888           888   ooooo      .8' `888.      8 Y88. .P  888    888ooooo8 "); Sleep(100);
 	gotoxy(x, y + 4); printf(" 8 `888'    888    .88oooo8888.        888        888     888           888      88     .88oooo8888.    8  `888'   888    888    "); Sleep(100);
-	gotoxy(x, y + 5); printf(" 8   Y      888   .8o'     `888.       888        888     888           `88.    .88'   .8o'     `888.   8    Y     888    888       8 "); Sleep(100);
+	gotoxy(x, y + 5); printf(" 8   Y      888   .8o'     `888.       888        888     888           `88.    .88'   .8o'     `888.   8    Y     888    888       o "); Sleep(100);
 	gotoxy(x, y + 6); printf("o8o        o888o  o88o     o8888o     o888o      o888o   o888o           `Y8bood8P'   o88o     o8888o  o8o        o888o  o888ooooood8 "); Sleep(100);
+
+
 }
 int menuDraw(void)
 {
@@ -45,6 +46,8 @@ int menuDraw(void)
 	gotoxy(x, y + 1); printf("게임 정보");
 	gotoxy(x, y + 2); printf("순위 보기");
 	gotoxy(x, y + 3); printf("게임 종료");
+
+	int new_name(int x, int y);
 
 	while (1) //무한반복
 	{
@@ -73,7 +76,37 @@ int menuDraw(void)
 			return y - 32; } //스페이스바 선택경우 시작위치 32이니까 0123 받을 수있음
 		}
 	}
+
+
+
 }
+
+
+int new_name(int x, int y) //사용자이름 입력
+{
+
+	char name[10];
+	gotoxy(x + 10, y + 10);
+	printf(" [ 캐 릭 터 생 성 ] ");
+
+
+	gotoxy(x + 10, y + 15);
+	printf(" [ 닉네임을 적어주세요 ]");
+	gotoxy(x + 10, y + 17);
+	printf(" 닉네임 : ");
+	scanf("%s", name);
+
+
+	FILE* fp;
+	fp = fopen("Nickname.txt", "w");
+	if (fp != NULL) {
+		fprintf(fp, "%s", name);
+
+	}
+	fclose(fp);
+}
+
+
 void infoDraw()
 {
 	system("cls");
@@ -92,14 +125,4 @@ void infoDraw()
 		if (keyControl() == SUBMIT)
 			break;
 	}
-}
-
-void user(void)
-{
-	int x = 5;
-	int y = 5;
-	char user[100];
-
-	gotoxy(x + 5, y + 5); printf("사용자이름 입력 : ");
-	gotoxy(x + 5, y + 6); scanf("%s", user);
 }
