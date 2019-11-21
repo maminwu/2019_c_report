@@ -12,8 +12,8 @@ int main()
 
 		if (menuCode == 0)
 		{
-			//First_Round(); //1단계 게임
-
+			new_name(0,0);
+			 
 			trueorfalse = First_Round(); //1단계 게임
 			Check(trueorfalse);
 

@@ -84,9 +84,10 @@ int menuDraw(void)
 
 int new_name(int x, int y) //사용자이름 입력
 {
+	system("cls");
 
 	char name[10];
-	gotoxy(x + 10, y + 10);
+	gotoxy(x + 10, y +10 );
 	printf(" [ 캐 릭 터 생 성 ] ");
 
 
@@ -104,6 +105,8 @@ int new_name(int x, int y) //사용자이름 입력
 
 	}
 	fclose(fp);
+
+	
 }
 
 
