@@ -2,3 +2,4 @@
 #include "game.h"
 
 int Check(int checknum);
+void NextRound();

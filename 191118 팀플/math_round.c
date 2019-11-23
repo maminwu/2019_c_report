@@ -1,7 +1,6 @@
 #include "math_round.h"
 
 
-
 int right(int a, int s)
 {
 	int mathchecknum;
@@ -118,5 +117,4 @@ void Third_Round()
 
 void Forth_Round()
 {
-
 }
