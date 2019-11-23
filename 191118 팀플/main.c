@@ -10,7 +10,7 @@ int main()
 		int menuCode = menuDraw(); //메뉴
 		int trueorfalse = -1; //math_round에서 받아온 값
 		int sol_to_main = 0;
-		Check(trueorfalse, sol_to_main);
+		Check(trueorfalse);
 
 		if (menuCode == 0)
 		{
@@ -20,12 +20,13 @@ int main()
 				switch (sol_to_main) {
 				case 0:
 					trueorfalse = First_Round(); //1단계 게임
-					Check(trueorfalse, sol_to_main);
+					Check(trueorfalse);
+					sol_to_main = Check();
 					continue;
 					break;
 				case 1:
 					trueorfalse = Second_Round(); //2단계 게임
-					Check(trueorfalse, sol_to_main);
+					Check(trueorfalse);
 					continue;
 					break;
 				}
