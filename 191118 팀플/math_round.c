@@ -49,6 +49,7 @@ void First_Round()
 	return truenum;
 
 }
+
 void Second_Round()
 {
 	system("cls");
@@ -77,10 +78,10 @@ void Second_Round()
 
 }
 
-void Third_Round()
+void Third_Round() //수정중
 {
 	system("cls");
-	srand(time(NULL)); //랜덤 시드값
+	srand(time(NULL)); 
 	float s, y;
 	int x1=1, x2=3, y1=7, y2=11;
 	char ans[100];

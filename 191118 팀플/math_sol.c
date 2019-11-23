@@ -7,10 +7,10 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 	
 	if (checknum == 0) //오답입니다.
 	{
-		int checknumber = checknum;
+		int x = 7, y = 7;
 
-		gotoxy(x - 2, y); printf("> 다시 하기");
-		gotoxy(x, y + 1); printf("풀이 보기\n\n");
+		gotoxy(x - 2, y); printf("> 다시 하기"); //0
+		gotoxy(x, y + 1); printf("풀이 보기\n\n"); //1
 
 		while (1)
 		{
@@ -43,10 +43,10 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 		system("PAUSE");
 		
 	}
+
 	else if (checknum == 1) //정답입니다.
 	{
-		int checknumber = checknum;
-		
+
 		gotoxy(x - 2, y); printf("> 다음 문제로");
 		gotoxy(x, y + 1); printf("풀이 보기\n\n");
 
@@ -77,5 +77,6 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 			{ return y - 7;}
 			}
 		}
+		system("PAUSE");
 	}
 }
