@@ -39,3 +39,17 @@
 #include  <time.h>
 
 #endif
+
+#ifndef _MMSYSTEM_H__
+#define _MMSYSTEM_H__
+
+#include  <MMSystem.h>
+
+#endif
+
+#ifndef _DIGHTALV_H__
+#define _DIGITALV_H__
+
+#include  <Digitalv.h>
+
+#endif
