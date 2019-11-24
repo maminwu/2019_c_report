@@ -89,23 +89,46 @@ int new_name(int x, int y) //사용자이름 입력
 {
 	system("cls");
 
-	char name[10];
-	gotoxy(x + 10, y +10 );
+	struct data {
+		int number;
+		int age;
+		char name[10];
+	};
+	struct data student;
+
+	gotoxy(x + 10, y +11 );
 	printf(" [ 캐 릭 터 생 성 ] ");
 
 
 	gotoxy(x + 10, y + 15);
-	printf(" [ 닉네임을 적어주세요 ]");
-	gotoxy(x + 10, y + 17);
-	printf(" 닉네임 : ");
-	scanf("%s", name);
+	printf(" [ 학번을 적어주세요 ]");
+	gotoxy(x + 10, y + 16);
+	printf(" 학번 : ");
+	scanf("%d", &student.number);
+
+	gotoxy(x + 10, y + 18);
+	printf(" [ 나이를 적어주세요 ]");
+	gotoxy(x + 10, y + 19);
+	printf(" 나이 : ");
+	scanf("%d", &student.age);
+
+	gotoxy(x + 10, y + 21);
+	printf(" [ 이름을 적어주세요 ]");
+	gotoxy(x + 10, y + 22);
+	printf(" 이름 : ");
+	scanf("%s", student.name);
+
+	gotoxy(x + 10, y + 25);
+	printf("[ 생성되었습니다 ]\n\n");
+
+	system("PAUSE");
+
 
 
 	FILE* fp;
 	fp = fopen("Nickname.txt", "w");
 	if (fp != NULL) {
-		fprintf(fp, "%s", name);
-
+		fprintf(fp, "%d, %d, %s\n", student.number,student.age, student.name);
 	}
 	fclose(fp);
 

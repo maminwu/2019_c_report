@@ -39,8 +39,17 @@ int main()
 					continue;
 					break;
 				case 2:
-					trueorfalse = Third_Round(); //2단계 게임
+					trueorfalse = Third_Round(); //3단계 게임
 					sol_to_main = Check(trueorfalse);
+					if (sol_to_main == 2)
+						roundcheck += 1;
+					continue;
+					break;
+				case 3:
+					trueorfalse = Forth_Round(); //4단계 게임
+					sol_to_main = Check(trueorfalse);
+					if (sol_to_main == 2)
+						roundcheck += 1;
 					continue;
 					break;
 				}

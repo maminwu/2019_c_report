@@ -5,13 +5,13 @@ int right(float a, float s)
 {
 	int mathchecknum;
 	if (a == s) {
-		printf("정답입니다.\n");
+		printf("\n정답입니다.\n");
 		mathchecknum = 1;
 		return mathchecknum;
 		system("PAUSE");
 	}
 	else {
-		printf("오답입니다.\n");
+		printf("\n오답입니다.\n");
 		mathchecknum = 0;
 		return mathchecknum;
 		system("PAUSE");
@@ -22,7 +22,6 @@ int right(float a, float s)
 void First_Round()
 {
 	system("cls"); //타이틀화면 삭제
-
 	srand(time(NULL)); //랜덤 시드값
 
 	int f_multiply = rand() % 9 + 1; //구구단 첫번째 수
@@ -33,7 +32,7 @@ void First_Round()
 	float ans, sol; //정답, 입력된 값
 
 
-	printf("1단계 문제 :  ");
+	printf("1단계 문제 : \n");
 	printf("(소수점은 둘째자리까지 계산하시오.)\n");
 	printf("' (%d × %d) ÷ %d ' 을 구하시오 : ", f_multiply, s_multiply, divide);
 	scanf("%f", &ans);
@@ -67,8 +66,9 @@ void Second_Round()
 	if (number == 0)
 	{
 		sol = 1;
-		return 0;
+		
 	}
+
 	for (int i = 1; i <= number; i++)
 	{
 		sol *= i;
@@ -78,44 +78,106 @@ void Second_Round()
 
 }
 
-void Third_Round() //수정중
+void Third_Round() 
 {
 	system("cls");
 	srand(time(NULL)); 
-	float s, y;
-	int x1=1, x2=3, y1=7, y2=11;
-	char ans[100];
-	char sol[100];
+	
+	int radius = rand() % 6 + 1;
+	float ans, sol;
 	int truenum;
 
-	printf("3단계 문제 :\n");
-	printf("(%d,%d), (%d,%d)을 지나는 일차함수를 구하시오. : ('y=ax+b' 의꼴) ", x1, y1, x2, y2);
+	printf("3단계 문제 :\n"); 
+	printf("(소수점은 둘째자리까지 계산하시오.)");
+	printf("(원주율은 3.14 입니다.)\n");
+	printf("반지름이 %d인 원의 넓이를 구하시오: ",radius);
+	scanf("%f", &ans);
 
-	scanf("%s", ans);
-	sol[10] ="y=2x+5";
+	sol = radius * radius * 3.14;
 
-	for (int i = 0; i < 10; i++)
-	{
-		if (ans[i] != sol[i])
-		{
-			printf("오답입니다.\n");
-			truenum = 0;
-			return truenum;
-			system("PAUSE");
-		}
-		else if (ans[i] == sol[i])
-		{
-			printf("정답입니다.\n");
-			truenum = 1;
-			return truenum;
-			system("PAUSE");
-		}
-		truenum = right(ans[i], sol[i]);
-		return truenum;
-	}
-
+	truenum = right(ans, sol);
+	return truenum;
 }
 
-void Forth_Round()
+void Forth_Round() //수정중 
 {
+	system("cls");
+
+	struct point {
+		int x, y;
+	};
+	struct rect {
+		struct point p1;
+		struct point p2;
+		struct point p3;
+	};
+
+	struct rect r;
+	
+	unsigned int sol_area;
+	unsigned int ans_area;
+	int truenum;
+
+	printf("[삼각형 넓이 구하기]\n");
+	printf("좌표를 입력하시오:");
+	scanf("%d %d", &r.p1.x, &r.p1.y);
+
+	printf("좌표를 입력하시오:");
+	scanf("%d %d", &r.p2.x, &r.p2.y);
+
+	printf("좌표를 입력하시오:");
+	scanf("%d %d", &r.p3.x, &r.p3.y);
+
+	while (1)
+	{
+		if (((r.p2.y - r.p1.y) / (r.p2.x - r.p1.x)) == ((r.p3.y - r.p1.y) / (r.p3.x - r.p1.x) == 1))
+		{
+			printf("다시 입력하시오\n");
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p1.x, &r.p1.y);
+
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p2.x, &r.p2.y);
+
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p3.x, &r.p3.y);
+		}
+
+		if (((r.p2.y - r.p1.y) / (r.p2.x - r.p1.x)) == ((r.p3.y - r.p2.y) / (r.p3.x - r.p2.x) == 1))
+		{
+			printf("다시 입력하시오\n");
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p1.x, &r.p1.y);
+
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p2.x, &r.p2.y);
+
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p3.x, &r.p3.y);
+		}
+
+		if (((r.p3.y - r.p2.y) / (r.p3.x - r.p2.x)) == ((r.p3.y - r.p1.y) / (r.p3.x - r.p1.x) == 1))
+		{
+			printf("다시 입력하시오\n");
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p1.x, &r.p1.y);
+
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p2.x, &r.p2.y);
+
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p3.x, &r.p3.y);
+		}
+	}
+
+	sol_area = ((r.p1.x * r.p3.y + r.p3.x * r.p2.y + r.p2.x * r.p1.y) - (r.p1.x * r.p2.y + r.p2.x * r.p3.y + r.p1.x)) / 2;
+	
+	printf("세 좌표로 둘러쌓인 삼각형의 넓이를 구하시오: ");
+	scanf("%u", &ans_area);
+	
+
+	truenum = right(ans_area, sol_area);
+
+	return truenum;
+
 }
