@@ -28,7 +28,8 @@ int main()
 						roundcheck += 1;
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
-
+						printf("\n\n\n«Æ¿Ã\n\n\n");
+						system("PAUSE");
 					}
 					continue;
 					break;
