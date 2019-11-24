@@ -1,7 +1,7 @@
 #include "math_round.h"
 
 
-int right(int a, int s)
+int right(float a, float s)
 {
 	int mathchecknum;
 	if (a == s) {
