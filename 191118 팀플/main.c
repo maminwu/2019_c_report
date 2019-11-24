@@ -53,7 +53,7 @@ int main()
 
 			trueorfalse = Third_Round(); //2단계 게임
 			Check(trueorfalse);
-
+			 
 			trueorfalse = Forth_Round(); //2단계 게임
 			Check(trueorfalse);
 			*/
