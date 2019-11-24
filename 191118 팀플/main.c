@@ -8,7 +8,7 @@ int main()
 	{
 		titleDraw(); //타이틀
 		int menuCode = menuDraw(); //메뉴
-		int trueorfalse = -1; //math_round에서 받아온 값
+		int trueorfalse = 0; //math_round에서 받아온 값
 		int sol_to_main = 0;
 		int roundcheck = 0;
 
