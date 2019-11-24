@@ -46,7 +46,6 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 	else if (checknum == 1) //정답입니다.
 	{
 		int checknumber = checknum;
-		//int roundnumber = roundnum;
 		gotoxy(x - 2, y); printf("> 다음 문제로");
 		gotoxy(x, y + 1); printf("풀이 보기\n\n");
 
@@ -74,7 +73,9 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 				}
 				break; }
 			case SUBMIT:
-			{ return y - 7;}
+			{ 
+				return y - 5;
+			}
 			}
 		}
 		
