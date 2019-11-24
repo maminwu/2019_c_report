@@ -16,7 +16,7 @@ int main()
 		
 		if (menuCode == 0)
 		{
-			new_name(0,0); 
+			new_name(0, 0);
 			while (1) {
 
 				switch (roundcheck) {
@@ -69,9 +69,9 @@ int main()
 		{
 			return 0; //게임종료
 		}
-		
 
-		
+
+
 	}
 	return 0;
 }
