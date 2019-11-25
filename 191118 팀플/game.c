@@ -7,16 +7,16 @@ int keyControl()
 	char temp = getch(); //getch()함수는 엔터안눌러도 키가 눌리면 바로 반환
 	//키가 입력되면 바로 temp변수에 임시로 값을 저장하고 if문에서 확인 해당문자 맞으면 값반환
 
-	if (temp == 'w' || temp == 'W') {
+	if (temp == 'w' || temp == 'W' || temp == 72) {
 		return UP;
 	}
-	else if (temp == 's' || temp == 'S') {
+	else if (temp == 's' || temp == 'S' || temp == 80) {
 		return DOWN;
 	}
-	else if (temp == 'a' || temp == 'A') {
+	else if (temp == 'a' || temp == 'A' || temp == 75) {
 		return LEFT;
 	}
-	else if (temp == 'd' || temp == 'D') {
+	else if (temp == 'd' || temp == 'D' || temp == 77) {
 		return RIGHT;
 	}
 	else if (temp == 13) {
