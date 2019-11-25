@@ -44,6 +44,8 @@ int main()
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
 						printf("\n\n\n0! = 1 이고, n! = n*(n-1)*(n-2)*(n-3)'''*1 입니다.\n\n\n");
+						if (sol_to_main == 3)
+							roundcheck += 1;
 						system("PAUSE");
 					}
 					continue;
@@ -57,6 +59,8 @@ int main()
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
 						printf("\n\n\n(원의 넓이) = (반지름) * (반지름) * 원주율(3.14)\n\n\n");
+						if (sol_to_main == 3)
+							roundcheck += 1;
 						system("PAUSE");
 					}
 					continue;
@@ -70,6 +74,8 @@ int main()
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
 						printf("\n\n\n(좌표가 주어졌을 때 삼각형의 넓이) = | 1/2(어쩌고저쩌고) |(\n\n\n");
+						if (sol_to_main == 3)
+							roundcheck += 1;
 						system("PAUSE");
 					}
 					continue;
