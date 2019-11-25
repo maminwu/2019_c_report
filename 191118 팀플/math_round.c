@@ -130,43 +130,17 @@ void Forth_Round() //수정중
 
 	while (1)
 	{
-		if (((r.p2.y - r.p1.y) / (r.p2.x - r.p1.x)) == ((r.p3.y - r.p1.y) / (r.p3.x - r.p1.x) == 1))
+		if (((r.p2.y - r.p1.y) / (r.p2.x - r.p1.x)) == ((r.p3.y - r.p1.y) / (r.p3.x - r.p1.x)) == ((r.p2.y - r.p3.y) / (r.p2.x - r.p3.x)))
 		{
-			printf("다시 입력하시오\n");
-			printf("좌표를 입력하시오:");
-			scanf("%d %d", &r.p1.x, &r.p1.y);
+		printf("다시 입력하시오\n");
+		printf("좌표를 입력하시오:");
+		scanf("%d %d", &r.p1.x, &r.p1.y);
 
-			printf("좌표를 입력하시오:");
-			scanf("%d %d", &r.p2.x, &r.p2.y);
+		printf("좌표를 입력하시오:");
+		scanf("%d %d", &r.p2.x, &r.p2.y);
 
-			printf("좌표를 입력하시오:");
-			scanf("%d %d", &r.p3.x, &r.p3.y);
-		}
-
-		if (((r.p2.y - r.p1.y) / (r.p2.x - r.p1.x)) == ((r.p3.y - r.p2.y) / (r.p3.x - r.p2.x) == 1))
-		{
-			printf("다시 입력하시오\n");
-			printf("좌표를 입력하시오:");
-			scanf("%d %d", &r.p1.x, &r.p1.y);
-
-			printf("좌표를 입력하시오:");
-			scanf("%d %d", &r.p2.x, &r.p2.y);
-
-			printf("좌표를 입력하시오:");
-			scanf("%d %d", &r.p3.x, &r.p3.y);
-		}
-
-		if (((r.p3.y - r.p2.y) / (r.p3.x - r.p2.x)) == ((r.p3.y - r.p1.y) / (r.p3.x - r.p1.x) == 1))
-		{
-			printf("다시 입력하시오\n");
-			printf("좌표를 입력하시오:");
-			scanf("%d %d", &r.p1.x, &r.p1.y);
-
-			printf("좌표를 입력하시오:");
-			scanf("%d %d", &r.p2.x, &r.p2.y);
-
-			printf("좌표를 입력하시오:");
-			scanf("%d %d", &r.p3.x, &r.p3.y);
+		printf("좌표를 입력하시오:");
+		scanf("%d %d", &r.p3.x, &r.p3.y);
 		}
 	}
 
