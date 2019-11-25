@@ -1,4 +1,5 @@
 #include "main.h"
+#define UNICODE
 
 #ifndef KEY_CODE
 #define KEY_CODE
@@ -10,6 +11,8 @@
 #define RIGHT 3
 #define SUBMIT 4
 
+
+
 #endif
 
 /* 함 수 선 언 */
@@ -19,4 +22,6 @@ void titleDraw(void); //타이틀
 int menuDraw(void); //메인메뉴
 void infoDraw();
 int new_name(int x, int y);
+
+
 

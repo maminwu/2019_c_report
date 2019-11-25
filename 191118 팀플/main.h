@@ -53,3 +53,11 @@
 #include  <Digitalv.h>
 
 #endif
+
+#ifndef _DIGHTALV_H__
+#define _DIGITALV_H__
+
+#include  <Digitalv.h>
+
+#endif
+

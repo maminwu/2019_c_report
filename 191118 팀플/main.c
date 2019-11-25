@@ -29,6 +29,8 @@ int main()
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
 						printf("\n\n\n괄호 안의 수식은 어떤 경우에서든지 우선순위가 가장 높습니다.\n\n\n");
+						if (sol_to_main == 3)
+							roundcheck += 1;
 						system("PAUSE");
 					}
 					continue;
