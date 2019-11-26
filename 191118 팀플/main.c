@@ -74,7 +74,9 @@ int main()
 						roundcheck += 1;
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
-						printf("\n\n\n(좌표가 주어졌을 때 삼각형의 넓이) = | 1/2(어쩌고저쩌고) |(\n\n\n");
+						printf("\n\n\n(좌표가 주어졌을 때 삼각형의 넓이) = | 1/2( p1x p3x p2x p1x )|\n");
+						printf("                          ( p1y p3y p2y p1x )\n\n\n");
+
 						if (sol_to_main == 3)
 							roundcheck += 1;
 						system("PAUSE");
@@ -87,7 +89,10 @@ int main()
 		}
 
 		else if (menuCode == 1)
+		{
+			init_2();
 			infoDraw(); //게임정보
+		}
 		else if (menuCode == 2)
 		{
 			//순위보기

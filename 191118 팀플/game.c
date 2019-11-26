@@ -24,7 +24,6 @@ int keyControl()
 	}
 }
 
-
 void titleDraw(void)
 {
 	system("cls");
@@ -40,6 +39,7 @@ void titleDraw(void)
 
 
 }
+
 int menuDraw(void)
 {
 	gotoxy(110, 30); printf("- Made by. 정길연, 정민우, 정세훈");
@@ -83,8 +83,6 @@ int menuDraw(void)
 	}
 }
 
-
-
 int new_name(int x, int y) //사용자이름 입력
 {
 	system("cls");
@@ -126,7 +124,6 @@ int new_name(int x, int y) //사용자이름 입력
 
 	
 }
-
 
 void infoDraw()
 {
