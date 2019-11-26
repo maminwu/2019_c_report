@@ -18,7 +18,7 @@
 /* 함 수 선 언 */
 
 int keyControl();
-void titleDraw(void); //타이틀
+void titleDraw(void); //타이틀//
 int menuDraw(void); //메인메뉴
 void infoDraw();
 int new_name(int x, int y);
