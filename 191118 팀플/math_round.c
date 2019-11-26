@@ -33,7 +33,7 @@ void First_Round()
 
 
 	printf("1단계 문제 : \n");
-	printf("(소수점은 둘째자리까지 계산하시오.)\n");
+	printf("소수점은 셋째자리부터 버려, 둘째자리까지 나타내시오.)\n");
 	printf("' (%d × %d) ÷ %d ' 을 구하시오 : ", f_multiply, s_multiply, divide);
 	scanf("%f", &ans);
 
@@ -88,7 +88,7 @@ void Third_Round()
 	int truenum;
 
 	printf("3단계 문제 :\n"); 
-	printf("(소수점은 둘째자리까지 계산하시오.)");
+	printf("(소수점은 셋째자리에서 반올림하여 둘째자리까지 나타내시오.)");
 	printf("(원주율은 3.14 입니다.)\n");
 	printf("반지름이 %d인 원의 넓이를 구하시오: ",radius);
 	scanf("%f", &ans);
@@ -99,7 +99,7 @@ void Third_Round()
 	return truenum;
 }
 
-void Forth_Round() //수정중 
+void Forth_Round() 
 {
 	system("cls");
 
@@ -114,11 +114,12 @@ void Forth_Round() //수정중
 
 	struct rect r;
 	
-	unsigned int sol_area;
-	unsigned int ans_area;
+	int sol_area;
+	int ans_area;
 	int truenum;
 
 	printf("[삼각형 넓이 구하기]\n");
+	printf("('7 8' 과 같이 띄어쓰기로 좌표를 표현하시오.)\n");
 	printf("좌표를 입력하시오:");
 	scanf("%d %d", &r.p1.x, &r.p1.y);
 
@@ -132,22 +133,27 @@ void Forth_Round() //수정중
 	{
 		if (((r.p2.y - r.p1.y) / (r.p2.x - r.p1.x)) == ((r.p3.y - r.p1.y) / (r.p3.x - r.p1.x)) == ((r.p2.y - r.p3.y) / (r.p2.x - r.p3.x)))
 		{
-		printf("다시 입력하시오\n");
-		printf("좌표를 입력하시오:");
-		scanf("%d %d", &r.p1.x, &r.p1.y);
+			printf("다시 입력하시오\n");
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p1.x, &r.p1.y);
 
-		printf("좌표를 입력하시오:");
-		scanf("%d %d", &r.p2.x, &r.p2.y);
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p2.x, &r.p2.y);
 
-		printf("좌표를 입력하시오:");
-		scanf("%d %d", &r.p3.x, &r.p3.y);
+			printf("좌표를 입력하시오:");
+			scanf("%d %d", &r.p3.x, &r.p3.y);
 		}
+		else
+			break;
 	}
 
 	sol_area = ((r.p1.x * r.p3.y + r.p3.x * r.p2.y + r.p2.x * r.p1.y) - (r.p1.x * r.p2.y + r.p2.x * r.p3.y + r.p1.x)) / 2;
+
+	if (sol_area < 0)
+		sol_area = sol_area * -1;
 	
 	printf("세 좌표로 둘러쌓인 삼각형의 넓이를 구하시오: ");
-	scanf("%u", &ans_area);
+	scanf("%d", &ans_area);
 	
 
 	truenum = right(ans_area, sol_area);

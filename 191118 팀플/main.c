@@ -16,6 +16,7 @@ int main()
 		
 		if (menuCode == 0)
 		{
+			init_2();
 			new_name(0, 0);
 			while (1) {
 
