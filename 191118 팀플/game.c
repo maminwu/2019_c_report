@@ -144,3 +144,12 @@ void infoDraw()
 			break;
 	}
 }
+
+void heart(int heartnum)
+{
+	char heartcount = {"¢¾"};
+	int a = 1;
+	while (a < heartnum, a++) {
+		printf("¢¾");
+	}
+}
