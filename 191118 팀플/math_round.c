@@ -11,8 +11,9 @@ int right(float a, float s)
 		system("PAUSE");
 	}
 	else {
-		printf("\n오답입니다.\n");
+		printf("\n오답입니다. 5초 경과 후 실행됩니다.\n");
 		mathchecknum = 0;
+		Sleep(5000);
 		return mathchecknum;
 		system("PAUSE");
 	}
@@ -99,7 +100,39 @@ void Third_Round()
 	return truenum;
 }
 
-void Forth_Round() 
+void Forth_Round()
+{
+	system("cls");
+	srand(time(NULL));
+
+	int a[5];
+	int b[5];
+	int truenum;
+
+	for (int i = 0; i < 5; i++)
+	{
+		a[i] = i;
+	}
+	for (int i = 0; i < 5; i++)
+	{
+		b[i] = i;
+	}
+
+	int A = a[(rand() % 5)];
+	int B = a[(rand() % 5)];
+
+	int M = 2;
+	printf(" (%d, %d), 기울기 : 2 일때, y절편을 구하여라: ", A, B);
+
+	int ans, sol;
+	sol = B - (M * A);
+	scanf("%d", &ans);
+
+	truenum = right(ans, sol);
+	return truenum;
+}
+
+void Fifth_Round() 
 {
 	system("cls");
 
@@ -161,3 +194,5 @@ void Forth_Round()
 	return truenum;
 
 }
+
+

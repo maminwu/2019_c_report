@@ -116,7 +116,7 @@ int new_name(int x, int y) //사용자이름 입력
 
 
 	FILE* fp;
-	fp = fopen("Nickname.txt", "w");
+	fp = fopen("Nickname.txt", "a");
 	if (fp != NULL) 
 	{
 		fprintf(fp, "%d/ %d/ %s\n", student.number,student.age, student.name);
@@ -135,9 +135,10 @@ void Help()
 
 	gotoxy(x, y); printf("    주어진 문제를 푸시오. 단계는 총 7단계입니다.");
 	gotoxy(x, y + 5); printf("-> 사용자 이름을 입력하면, 순위에 올라갈 수있습니다.");
-	gotoxy(x, y + 6); printf("-> 기회는 3번 주어집니다. 답을 틀렸을 시, 기회가 한 번씩 줄어들게 되며, 3번 실패시 자동종료됩니다.");
+	gotoxy(x, y + 6); printf("-> 기회는 3번 주어집니다. 답을 틀렸을 시, 5초가 경과되고, 기회가 한 번씩 줄어들게 되며, 3번 실패시 자동종료됩니다.");
 	gotoxy(x, y + 7); printf("-> 문제 풀이 도중 풀이는 1번 볼 수있으며, 답을 맞춘 후에는 풀이를 조건없이 열람가능합니다.");
-	gotoxy(x, y + 11); printf("   **  스페이스바를 누르면 메인화면으로 이동합니다. **");
+	gotoxy(x, y + 8); printf("-> 조작은 방향키와 엔터를 이용합니다. ( w(위) a(좌) s(아래) d(우)도 가능합니다. 입력이 안될 시 한/영에서 영어설정 )");
+	gotoxy(x, y + 11); printf("   **  엔터를 누르면 메인화면으로 이동합니다. **");
 
 	while (1)
 	{
@@ -157,15 +158,24 @@ void heart(int heartnum)
 
 void viewlog()
 {
-	char buffer[10000];
+	system("cls");
+
+	char buffer[10000] = {0, }; 
+	//파일을 읽을 때 사용할 임시 공간(버퍼)를 선언해야 하는데 
+	//fread 함수를 사용할 때는 char 배열을 선언한 뒤 반드시 0으로 초기화해야 한다.
+	//(char 포인터에 동적 메모리를 할당한 뒤 0으로 초기화해도 된다)
 
 	FILE* fp = fopen("Nickname.txt", "r");
 
-	fgets(buffer, sizeof(buffer), fp);
-	
-	system("cls");
+	//fgets(buffer, sizeof(buffer), fp); 이건 줄바꿈문자있으면 그 전까지만 읽어오기 가능
+	fread(buffer, sizeof(buffer), 1, fp);
 	printf("%s\n\n", buffer);
-	system("PAUSE");
-
 	fclose(fp);
+
+	printf("\n\n   **  엔터를 누르면 메인화면으로 이동합니다. **");
+	while (1)
+	{
+		if (keyControl() == SUBMIT)
+			break;
+	}
 }
