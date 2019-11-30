@@ -6,6 +6,7 @@ int main()
 	init(); //콘솔창 크기조정 (가로,세로)
 	while (1)
 	{
+		
 		titleDraw(); //타이틀
 		int menuCode = menuDraw(); //메뉴
 		int trueorfalse = 0; //math_round에서 받아온 값
@@ -16,14 +17,28 @@ int main()
 		
 		if (menuCode == 0)
 		{
+
 			init_2();
 			new_name(0, 0);
-			while (1) {
+			FILE* fp = NULL;
+			//PlaySound(TEXT(BGMPATH), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP); // 배경음악 재생
 
+			int i;
+			float gap;
+			time_t startTime = 0, endTime = 0;
+			gotoxy(0, 27); printf("시간 측정을 시작합니다.");
+			Sleep(500);
+			startTime = clock();
+			for (i = 1; i <= 100000000; i++) {}
+
+			
+			while (1)
+			{
+				
 				switch (roundcheck) {
 				case 1:
 					system("cls");
-					trueorfalse= First_Round(); //1단계 게임
+					trueorfalse = First_Round(); //1단계 게임
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2)
 						roundcheck += 1;
@@ -38,7 +53,7 @@ int main()
 					break;
 				case 2:
 					system("cls");
-					trueorfalse = Second_Round(); //2단계 게임
+					trueorfalse = Second_Round(); //2단계 게임 
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2)
 						roundcheck += 1;
@@ -78,32 +93,54 @@ int main()
 						printf("                          ( p1y p3y p2y p1x )\n\n\n");
 
 						if (sol_to_main == 3)
-							roundcheck += 1;
-						system("PAUSE");
+							system("cls");
 					}
-					continue;
+				default:
 					break;
 				}
+				break;
 			}
+	
+			endTime = clock();
+			gap = (float)(endTime - startTime) / (CLOCKS_PER_SEC);
+
+
+			fp = fopen("Nickname.txt", "a"); // 점수 저장 파일 열기
+			if (fp == NULL) // 파일 열기 오류
+				printf("점수 기록 파일 작성 실패!\n\n");
+			else
+			{
+				fprintf(fp, "%.2lf초\n\n", gap); // 시간 기록
+				fclose(fp);
+			}
+
+
+			gotoxy(15, 15); printf("시간 측정이 끝났습니다.");
+			gotoxy(15, 16); printf("측정시간 : %.2f 초\n\n", gap);
+			//PlaySound(NULL, 0, 0);
+
+			Sleep(1000);
+			printf("메인화면으로 이동합니다.");
+			system("PAUSE");
+			init();
+			titleDraw();
 			
 		}
 
 		else if (menuCode == 1)
 		{
 			init_2();
-			infoDraw(); //게임정보
+			Help(); //게임정보
 		}
 		else if (menuCode == 2)
 		{
-			//순위보기
+			viewlog(); // 점수 보기 함수
+			
 		}
 		else if (menuCode == 3)
 		{
 			return 0; //게임종료
 		}
-
-
-
 	}
 	return 0;
 }

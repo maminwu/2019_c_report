@@ -117,15 +117,16 @@ int new_name(int x, int y) //사용자이름 입력
 
 	FILE* fp;
 	fp = fopen("Nickname.txt", "w");
-	if (fp != NULL) {
-		fprintf(fp, "%d, %d, %s\n", student.number,student.age, student.name);
+	if (fp != NULL) 
+	{
+		fprintf(fp, "%d/ %d/ %s\n", student.number,student.age, student.name);
 	}
 	fclose(fp);
 
 	
 }
 
-void infoDraw()
+void Help()
 {
 	system("cls");
 
@@ -152,4 +153,19 @@ void heart(int heartnum)
 	while (a < heartnum, a++) {
 		printf("♥");
 	}
+}
+
+void viewlog()
+{
+	char buffer[10000];
+
+	FILE* fp = fopen("Nickname.txt", "r");
+
+	fgets(buffer, sizeof(buffer), fp);
+	
+	system("cls");
+	printf("%s\n\n", buffer);
+	system("PAUSE");
+
+	fclose(fp);
 }

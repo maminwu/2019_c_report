@@ -1,3 +1,6 @@
+//#pragma comment(lib, "winmm.lib") // PlaySound 함수 호출 용
+//#define BGMPATH "AcidRain.wav" // 배경음악의 경로(파일 이름)
+
 #ifndef __STDIO_H__ //__STDIO_H__라는 매크로가 정의되어있지 않으면
 #define __STDIO_H__ //__STDIO_H__를 정의한다
 
@@ -60,4 +63,5 @@
 #include  <Digitalv.h>
 
 #endif
+
 

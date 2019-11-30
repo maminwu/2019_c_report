@@ -7,7 +7,7 @@ void init()
 
 void init_2()
 {
-	system("mode con cols=80 lines=30"); //콘솔창 크기조정 (가로,세로)
+	system("mode con cols=90 lines=30"); //콘솔창 크기조정 (가로,세로)
 }
 
 void gotoxy(int x, int y) //커서위치 이동함수
