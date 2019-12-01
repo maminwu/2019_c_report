@@ -3,7 +3,7 @@
 int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기 
 {
 
-	int x = 7, y = 7;
+	int x = 7, y = 10;
 
 
 	if (checknum == 0) //오답입니다.
@@ -18,7 +18,7 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 			switch (n)
 			{
 			case UP: {
-				if (y > 7) //계속 못올라가게
+				if (y > 10) //계속 못올라가게
 				{
 					gotoxy(x - 2, y); //'>'을 두칸 이전에 출력하려고
 					printf(" "); //원래 위치 지우기
@@ -27,7 +27,7 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 				}
 				break; }
 			case DOWN: {
-				if (y < 8) //계속 못내려가게
+				if (y < 11) //계속 못내려가게
 				{
 					gotoxy(x - 2, y);
 					printf(" ");
@@ -36,7 +36,9 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 				}
 				break; }
 			case SUBMIT:
-			{ return y - 7; }
+			{ 
+				return y - 10; 
+			}
 
 			}
 		}
@@ -55,7 +57,7 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 			switch (n)
 			{
 			case UP: {
-				if (y > 7) //계속 못올라가게
+				if (y > 10) //계속 못올라가게
 				{
 					gotoxy(x - 2, y); //'>'을 두칸 이전에 출력하려고
 					printf(" "); //원래 위치 지우기
@@ -64,7 +66,7 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 				}
 				break; }
 			case DOWN: {
-				if (y < 8) //계속 못내려가게
+				if (y < 11) //계속 못내려가게
 				{
 					gotoxy(x - 2, y);
 					printf(" ");
@@ -74,7 +76,7 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 				break; }
 			case SUBMIT:
 			{ 
-				return y - 5;
+				return y - 10;
 			}
 			}
 		}

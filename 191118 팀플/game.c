@@ -156,6 +156,12 @@ void heart(int heartnum)
 	}
 }
 
+void life()
+{
+	char lifeheart= { "¢¾" };
+	char deadheart = { "¢½" };
+
+}
 void viewlog()
 {
 	system("cls");
