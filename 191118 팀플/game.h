@@ -1,5 +1,10 @@
 #include "main.h"
+
 #define UNICODE
+
+#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#endif
 
 #ifndef KEY_CODE
 #define KEY_CODE
@@ -11,11 +16,8 @@
 #define RIGHT 3
 #define SUBMIT 4
 
-
-
 #endif
 
-/* 함 수 선 언 */
 
 int keyControl();
 void titleDraw(void); //타이틀//

@@ -6,15 +6,15 @@ int right(float a, float s)
 	int mathchecknum;
 
 	if (a == s) {
-		printf("\n정답입니다.\n");
+		printf("\n\n정답입니다.\n");
 		mathchecknum = 1;
 		return mathchecknum;
 		system("PAUSE");
 	}
 	else {
-		printf("\n오답입니다. 5초 경과 후 실행됩니다.\n");
+		printf("\n\n오답입니다. 5초 경과 후 실행됩니다.\n");
 		mathchecknum = 0;
-		Sleep(5000);
+		Sleep(500);
 		return mathchecknum;
 		system("PAUSE");
 	}
@@ -23,11 +23,8 @@ int right(float a, float s)
 }
 
 
-
-
 void First_Round()
 {
-	//system("cls"); //타이틀화면 삭제
 	srand(time(NULL)); //랜덤 시드값
 
 	int f_multiply = rand() % 9 + 1; //구구단 첫번째 수
@@ -38,7 +35,7 @@ void First_Round()
 	float ans, sol; //정답, 입력된 값
 
 
-	printf("1단계 문제 : \n");
+	printf("< 1단계 문제 > \n");
 	printf("소수점은 셋째자리부터 버려, 둘째자리까지 나타내시오.)\n");
 	printf("' (%d × %d) ÷ %d ' 을 구하시오 : ", f_multiply, s_multiply, divide);
 	scanf("%f", &ans);
@@ -56,7 +53,6 @@ void First_Round()
 
 void Second_Round()
 {
-	//system("cls");
 	srand(time(NULL)); //랜덤 시드값
 
 	int number = rand() % 7; //0~6까지의 랜덤 수
@@ -64,7 +60,7 @@ void Second_Round()
 	int sol = 1; //정답
 	int truenum;
 
-	printf("2단계 문제 :\n");
+	printf("< 2단계 문제 >\n");
 	printf("'%d! '을 구하시오 : ", number);
 	scanf("%d", &ans);
 
@@ -85,14 +81,13 @@ void Second_Round()
 
 void Third_Round() 
 {
-	//system("cls");
 	srand(time(NULL)); 
 	
 	int radius = rand() % 6 + 1;
 	float ans, sol;
 	int truenum;
 
-	printf("3단계 문제 :\n"); 
+	printf("< 3단계 문제 >\n"); 
 	printf("(소수점은 셋째자리에서 반올림하여 둘째자리까지 나타내시오.)");
 	printf("(원주율은 3.14 입니다.)\n");
 	printf("반지름이 %d인 원의 넓이를 구하시오: ",radius);
@@ -106,7 +101,6 @@ void Third_Round()
 
 void Forth_Round()
 {
-	//system("cls");
 	srand(time(NULL));
 
 	int a[5];
@@ -126,6 +120,7 @@ void Forth_Round()
 	int B = a[(rand() % 5)];
 
 	int M = 2;
+	printf("< 4단계 문제 >\n");
 	printf(" (%d, %d), 기울기 : 2 일때, y절편을 구하여라: ", A, B);
 
 	int ans, sol;
@@ -136,10 +131,78 @@ void Forth_Round()
 	return truenum;
 }
 
-void Fifth_Round() 
+void Fifth_Round()
 {
-	//system("cls");
+	srand(time(NULL));
+	enum days { MON, TUE, WED, THU, FRI, SAT, SUN };
+	char* days_name[] = {
+		"월요일", "화요일", "수요일", "목요일", "금요일","토요일","일요일" };
 
+	enum days day = rand() % 7;
+	printf("< 5단계 문제 >\n");
+	printf("월요일부터 시작할때, %s은 몇번째 요일인지 구하시오 : \n", days_name[day]);
+	printf("( EX.수요일 -> 답: 3 ) ");
+	int ans, sol;
+	sol = day + 1;
+	scanf("%d", &ans);
+
+	int truenum;
+	truenum = right(ans, sol);
+
+	return truenum;
+}
+
+
+union Box {    // 공용체 정의
+	short level;     // 2바이트
+	float score;     // 4바이트
+	char name[8];    // 8바이트
+	//  공용체의 전체 크기는 가장 큰 자료형의 크기 -> 8
+}; 
+
+void Sixth_Round()
+{
+	union Box b1;
+	union Box b2;
+	union Box b3; // 공용체 변수 선언
+
+	b1.level = 4;
+	printf("level:%d  ", b1.level);
+	b1.score = 4.2;
+	printf("score:%.1f  ", b1.score);
+	strcpy(b1.name, "정길연");
+	printf("name:%s\n", b1.name);
+
+	b2.level = 2;
+	printf("level:%d  ", b2.level);
+	b2.score = 4.4;
+	printf("score:%.1f  ", b2.score);
+	strcpy(b2.name, "정민우");
+	printf("name:%s\n", b2.name);
+
+	b3.level = 3;
+	printf("level:%d  ", b3.level);
+	b3.score = 4.3;
+	printf("score:%.1f  ", b3.score);
+	strcpy(b3.name, "정세훈");
+	printf("name:%s\n\n", b3.name);
+
+	printf("< 6단계 문제 >\n");
+	printf("3명의 학생들의 평균을 구해보시오 : \n");
+	printf("( 점수 : level * score )  ");
+
+	float ans;
+	float sol = (4 * 4.2 + 2 * 4.4 + 3 * 4.3) / 3;
+	scanf("%.1f", &ans);
+
+	int truenum;
+	truenum = right(ans, sol);
+
+	return truenum;
+}
+
+void Seventh_Round()
+{
 	struct point {
 		int x, y;
 	};
@@ -183,12 +246,12 @@ void Fifth_Round()
 		else
 			break;
 	}
-
 	sol_area = ((r.p1.x * r.p3.y + r.p3.x * r.p2.y + r.p2.x * r.p1.y) - (r.p1.x * r.p2.y + r.p2.x * r.p3.y + r.p1.x)) / 2;
 
 	if (sol_area < 0)
 		sol_area = sol_area * -1;
 	
+	printf("< 7단계 문제 > \n");
 	printf("세 좌표로 둘러쌓인 삼각형의 넓이를 구하시오: ");
 	scanf("%d", &ans_area);
 	
@@ -196,5 +259,4 @@ void Fifth_Round()
 	truenum = right(ans_area, sol_area);
 
 	return truenum;
-
 }

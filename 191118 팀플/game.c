@@ -147,13 +147,34 @@ void Help()
 	}
 }
 
-void heart(int heartnum)
+int heart(int heartnum)
 {
-	char heartcount = {"¢¾"};
-	int a = 1;
-	while (a < heartnum, a++) {
+	printf("¸ñ¼û¼ö :");
+	switch (heartnum) 
+	{
+	case 7:
+		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾");
+		break;
+	case 6:
+		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾");
+		break;
+	case 5:
+		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾");
+		break;
+	case 4:
+		printf("¢¾ ¢¾ ¢¾ ¢¾");
+		break;
+	case 3:
+		printf("¢¾ ¢¾ ¢¾");
+		break;
+	case 2:
+		printf("¢¾ ¢¾");
+		break;
+	case 1:
 		printf("¢¾");
+		break;
 	}
+	printf("\n");
 }
 
 void viewlog()
