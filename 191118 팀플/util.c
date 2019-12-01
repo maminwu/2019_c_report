@@ -18,4 +18,3 @@ void gotoxy(int x, int y) //커서위치 이동함수
 	pos.Y = y;
 	SetConsoleCursorPosition(consoleHandle, pos);
 }
-
