@@ -22,7 +22,4 @@ void titleDraw(void); //타이틀//
 int menuDraw(void); //메인메뉴
 void Help();
 int new_name(int x, int y);
-void heart(int heartnum);
 void viewlog(); // 점수 보기 함수
-
-

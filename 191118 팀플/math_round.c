@@ -4,6 +4,7 @@
 int right(float a, float s)
 {
 	int mathchecknum;
+
 	if (a == s) {
 		printf("\n정답입니다.\n");
 		mathchecknum = 1;
@@ -17,12 +18,16 @@ int right(float a, float s)
 		return mathchecknum;
 		system("PAUSE");
 	}
+
+
 }
+
+
 
 
 void First_Round()
 {
-	system("cls"); //타이틀화면 삭제
+	//system("cls"); //타이틀화면 삭제
 	srand(time(NULL)); //랜덤 시드값
 
 	int f_multiply = rand() % 9 + 1; //구구단 첫번째 수
@@ -37,7 +42,6 @@ void First_Round()
 	printf("소수점은 셋째자리부터 버려, 둘째자리까지 나타내시오.)\n");
 	printf("' (%d × %d) ÷ %d ' 을 구하시오 : ", f_multiply, s_multiply, divide);
 	scanf("%f", &ans);
-
 	sol = ((f_multiply * s_multiply) / (divide * 1.0)); //1.0f를 곱해야 소수점까지 계산 가능
 
 	sol = (int)(sol * 100);
@@ -52,7 +56,7 @@ void First_Round()
 
 void Second_Round()
 {
-	system("cls");
+	//system("cls");
 	srand(time(NULL)); //랜덤 시드값
 
 	int number = rand() % 7; //0~6까지의 랜덤 수
@@ -81,7 +85,7 @@ void Second_Round()
 
 void Third_Round() 
 {
-	system("cls");
+	//system("cls");
 	srand(time(NULL)); 
 	
 	int radius = rand() % 6 + 1;
@@ -102,7 +106,7 @@ void Third_Round()
 
 void Forth_Round()
 {
-	system("cls");
+	//system("cls");
 	srand(time(NULL));
 
 	int a[5];
@@ -134,7 +138,7 @@ void Forth_Round()
 
 void Fifth_Round() 
 {
-	system("cls");
+	//system("cls");
 
 	struct point {
 		int x, y;
@@ -194,5 +198,3 @@ void Fifth_Round()
 	return truenum;
 
 }
-
-
