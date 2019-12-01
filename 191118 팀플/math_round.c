@@ -4,19 +4,15 @@
 int right(float a, float s)
 {
 	int mathchecknum;
-	int heartnum =7;
 
 	if (a == s) {
 		printf("\n정답입니다.\n");
-		heart(heartnum);
 		mathchecknum = 1;
 		return mathchecknum;
 		system("PAUSE");
 	}
 	else {
 		printf("\n오답입니다. 5초 경과 후 실행됩니다.\n");
-		heartnum += -1;
-		heart(heartnum);
 		mathchecknum = 0;
 		Sleep(5000);
 		return mathchecknum;
@@ -26,43 +22,12 @@ int right(float a, float s)
 
 }
 
-int heart(int heartnum)
-{
-	char heartcount = { "♥" };
-	int a = 1;
-	printf("\n");
-	printf("목숨수 :");
-	switch (heartnum) {
-	case 7:
-		printf("♥ ♥ ♥ ♥ ♥ ♥ ♥");
-		break;
-	case 6:
-		printf("♥ ♥ ♥ ♥ ♥ ♥");
-		break;
-	case 5:
-		printf("♥ ♥ ♥ ♥ ♥");
-		break;
-	case 4:
-		printf("♥ ♥ ♥ ♥");
-		break;
-	case 3:
-		printf("♥ ♥ ♥");
-		break;
-	case 2:
-		printf("♥ ♥");
-		break;
-	case 1:
-		printf("♥");
-		break;
 
-	}
-
-}
 
 
 void First_Round()
 {
-	system("cls"); //타이틀화면 삭제
+	//system("cls"); //타이틀화면 삭제
 	srand(time(NULL)); //랜덤 시드값
 
 	int f_multiply = rand() % 9 + 1; //구구단 첫번째 수
@@ -91,7 +56,7 @@ void First_Round()
 
 void Second_Round()
 {
-	system("cls");
+	//system("cls");
 	srand(time(NULL)); //랜덤 시드값
 
 	int number = rand() % 7; //0~6까지의 랜덤 수
@@ -120,7 +85,7 @@ void Second_Round()
 
 void Third_Round() 
 {
-	system("cls");
+	//system("cls");
 	srand(time(NULL)); 
 	
 	int radius = rand() % 6 + 1;
@@ -141,7 +106,7 @@ void Third_Round()
 
 void Forth_Round()
 {
-	system("cls");
+	//system("cls");
 	srand(time(NULL));
 
 	int a[5];
@@ -173,7 +138,7 @@ void Forth_Round()
 
 void Fifth_Round() 
 {
-	system("cls");
+	//system("cls");
 
 	struct point {
 		int x, y;

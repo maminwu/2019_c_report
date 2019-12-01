@@ -12,7 +12,7 @@ int main()
 		int trueorfalse = 0; //math_round에서 받아온 값
 		int sol_to_main = 0;
 		int roundcheck = 1;
-	
+		int heartnum = 7;
 
 		//Check(trueorfalse);
 		
@@ -39,6 +39,7 @@ int main()
 				switch (roundcheck) {
 				case 1:
 					system("cls");
+					heart(heartnum);
 					trueorfalse = First_Round(); //1단계 게임
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2) {
@@ -48,14 +49,20 @@ int main()
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
 						printf("\n\n\n괄호 안의 수식은 어떤 경우에서든지 우선순위가 가장 높습니다.\n\n\n");
-						if (sol_to_main == 3)
+						if (sol_to_main == 3) {
 							roundcheck += 1;
+							
+						}
 						system("PAUSE");
+
 					}
+					else if (sol_to_main == 0)
+						heartnum += -1;
 					continue;
 					break;
 				case 2:
 					system("cls");
+					heart(heartnum);
 					trueorfalse = Second_Round(); //2단계 게임 
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2)
@@ -67,10 +74,13 @@ int main()
 							roundcheck += 1;
 						system("PAUSE");
 					}
+					else if (sol_to_main == 0)
+						heartnum += -1;
 					continue;
 					break;
 				case 3:
 					system("cls");
+					heart(heartnum);
 					trueorfalse = Third_Round(); //3단계 게임
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2)
@@ -82,10 +92,13 @@ int main()
 							roundcheck += 1;
 						system("PAUSE");
 					}
+					else if (sol_to_main == 0)
+						heartnum += -1;
 					continue;
 					break;
 				case 4:
 					system("cls");
+					heart(heartnum);
 					trueorfalse = Forth_Round(); //4단계 게임
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2)
@@ -97,10 +110,13 @@ int main()
 							roundcheck += 1;
 						system("PAUSE");
 					}
+					else if (sol_to_main == 0)
+						heartnum += -1;
 					continue;
 					break;
 				case 5:
 					system("cls");
+					heart(heartnum);
 					trueorfalse = Fifth_Round(); //5단계 게임
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2)
@@ -113,6 +129,8 @@ int main()
 						if (sol_to_main == 3)
 							system("cls");
 					}
+					else if (sol_to_main == 0)
+						heartnum += -1;
 				default:
 					break;
 				}
@@ -162,4 +180,34 @@ int main()
 		}
 	}
 	return 0;
+}
+
+
+int heart(int heartnum)
+{
+	printf("목숨수 :");
+	switch (heartnum) {
+	case 7:
+		printf("♥ ♥ ♥ ♥ ♥ ♥ ♥");
+		break;
+	case 6:
+		printf("♥ ♥ ♥ ♥ ♥ ♥");
+		break;
+	case 5:
+		printf("♥ ♥ ♥ ♥ ♥");
+		break;
+	case 4:
+		printf("♥ ♥ ♥ ♥");
+		break;
+	case 3:
+		printf("♥ ♥ ♥");
+		break;
+	case 2:
+		printf("♥ ♥");
+		break;
+	case 1:
+		printf("♥");
+		break;
+	}
+	printf("\n");
 }
