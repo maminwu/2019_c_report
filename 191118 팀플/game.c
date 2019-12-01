@@ -147,15 +147,6 @@ void Help()
 	}
 }
 
-void heart(int heartnum)
-{
-	char heartcount = {"¢¾"};
-	int a = 1;
-	while (a < heartnum, a++) {
-		printf("¢¾");
-	}
-}
-
 void viewlog()
 {
 	system("cls");

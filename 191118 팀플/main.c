@@ -12,6 +12,7 @@ int main()
 		int trueorfalse = 0; //math_round에서 받아온 값
 		int sol_to_main = 0;
 		int roundcheck = 1;
+	
 
 		//Check(trueorfalse);
 		
@@ -40,8 +41,10 @@ int main()
 					system("cls");
 					trueorfalse = First_Round(); //1단계 게임
 					sol_to_main = Check(trueorfalse);
-					if (sol_to_main == 2)
+					if (sol_to_main == 2) {
 						roundcheck += 1;
+						
+					}
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
 						printf("\n\n\n괄호 안의 수식은 어떤 경우에서든지 우선순위가 가장 높습니다.\n\n\n");
@@ -160,4 +163,3 @@ int main()
 	}
 	return 0;
 }
-

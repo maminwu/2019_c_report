@@ -4,19 +4,59 @@
 int right(float a, float s)
 {
 	int mathchecknum;
+	int heartnum =7;
+
 	if (a == s) {
 		printf("\n정답입니다.\n");
+		heart(heartnum);
 		mathchecknum = 1;
 		return mathchecknum;
 		system("PAUSE");
 	}
 	else {
 		printf("\n오답입니다. 5초 경과 후 실행됩니다.\n");
+		heartnum += -1;
+		heart(heartnum);
 		mathchecknum = 0;
 		Sleep(5000);
 		return mathchecknum;
 		system("PAUSE");
 	}
+
+
+}
+
+int heart(int heartnum)
+{
+	char heartcount = { "♥" };
+	int a = 1;
+	printf("\n");
+	printf("목숨수 :");
+	switch (heartnum) {
+	case 7:
+		printf("♥ ♥ ♥ ♥ ♥ ♥ ♥");
+		break;
+	case 6:
+		printf("♥ ♥ ♥ ♥ ♥ ♥");
+		break;
+	case 5:
+		printf("♥ ♥ ♥ ♥ ♥");
+		break;
+	case 4:
+		printf("♥ ♥ ♥ ♥");
+		break;
+	case 3:
+		printf("♥ ♥ ♥");
+		break;
+	case 2:
+		printf("♥ ♥");
+		break;
+	case 1:
+		printf("♥");
+		break;
+
+	}
+
 }
 
 
@@ -37,7 +77,6 @@ void First_Round()
 	printf("소수점은 셋째자리부터 버려, 둘째자리까지 나타내시오.)\n");
 	printf("' (%d × %d) ÷ %d ' 을 구하시오 : ", f_multiply, s_multiply, divide);
 	scanf("%f", &ans);
-
 	sol = ((f_multiply * s_multiply) / (divide * 1.0)); //1.0f를 곱해야 소수점까지 계산 가능
 
 	sol = (int)(sol * 100);

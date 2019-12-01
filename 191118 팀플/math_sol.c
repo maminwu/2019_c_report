@@ -3,6 +3,8 @@
 int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기 
 {
 
+
+
 	int x = 7, y = 7;
 
 
