@@ -47,8 +47,9 @@ int menuDraw(void)
 	int x = 70;
 	int y = 32;
 
-	gotoxy(x - 2, y); printf("> 게임 시작"); //-2하는 이유는 >을 넣어야되서
-	gotoxy(x, y + 1); printf("게임 정보");
+	
+	setcolor(12,0); gotoxy(x - 2, y); printf("> 게임 시작"); //-2하는 이유는 >을 넣어야되서
+	setcolor(3, 0); gotoxy(x, y + 1); printf("게임 정보");
 	gotoxy(x, y + 2); printf("순위 보기");
 	gotoxy(x, y + 3); printf("게임 종료");
 

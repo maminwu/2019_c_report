@@ -4,6 +4,7 @@
 int main()
 {
 	init(); //콘솔창 크기조정 (가로,세로)
+	Cursor();
 	while (1)
 	{
 

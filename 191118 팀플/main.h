@@ -70,3 +70,12 @@
 #include  <Digitalv.h>
 
 #endif
+
+#ifdef _IOSTREAM_H
+#define _IOSTREAM_H
+
+#include <iostream>
+
+#endif
+
+
