@@ -35,9 +35,9 @@ void First_Round()
 	float ans, sol; //정답, 입력된 값
 
 
-	printf("< 1단계 문제 > \n");
-	printf("소수점은 셋째자리부터 버려, 둘째자리까지 나타내시오.)\n");
-	printf("' (%d × %d) ÷ %d ' 을 구하시오 : ", f_multiply, s_multiply, divide);
+	gotoxy(20, 2); printf("< 1단계 문제 > ");
+	gotoxy(5, 4); printf("소수점은 셋째자리부터 버려, 둘째자리까지 나타내시오.)");
+	gotoxy(5, 5); printf("' (%d × %d) ÷ %d ' 을 구하시오 : ", f_multiply, s_multiply, divide);
 	scanf("%f", &ans);
 	sol = ((f_multiply * s_multiply) / (divide * 1.0)); //1.0f를 곱해야 소수점까지 계산 가능
 
@@ -60,8 +60,8 @@ void Second_Round()
 	int sol = 1; //정답
 	int truenum;
 
-	printf("< 2단계 문제 >\n");
-	printf("'%d! '을 구하시오 : ", number);
+	gotoxy(20, 2); printf("< 2단계 문제 >\n");
+	gotoxy(5, 4); printf("'%d! '을 구하시오 : ", number);
 	scanf("%d", &ans);
 
 	if (number == 0)
@@ -87,10 +87,11 @@ void Third_Round()
 	float ans, sol;
 	int truenum;
 
-	printf("< 3단계 문제 >\n"); 
-	printf("(소수점은 셋째자리에서 반올림하여 둘째자리까지 나타내시오.)");
-	printf("(원주율은 3.14 입니다.)\n");
-	printf("반지름이 %d인 원의 넓이를 구하시오: ",radius);
+	gotoxy(20, 2); printf("< 3단계 문제 >");
+	gotoxy(2, 4); printf("반지름이 %d인 원의 넓이를 구하시오: ", radius);
+	gotoxy(2, 5); printf("(소수점은 셋째자리에서 반올림하여 둘째자리까지 나타내시오.)");
+	gotoxy(2, 6); printf("(원주율은 3.14 입니다.)  ");
+	
 	scanf("%f", &ans);
 
 	sol = radius * radius * 3.14;
@@ -120,8 +121,8 @@ void Forth_Round()
 	int B = a[(rand() % 5)];
 
 	int M = 2;
-	printf("< 4단계 문제 >\n");
-	printf(" (%d, %d), 기울기 : 2 일때, y절편을 구하여라: ", A, B);
+	gotoxy(20, 2); printf("< 4단계 문제 >");
+	gotoxy(3, 4); printf(" (%d, %d), 기울기 : 2 일때, y절편을 구하여라: ", A, B);
 
 	int ans, sol;
 	sol = B - (M * A);
@@ -139,9 +140,9 @@ void Fifth_Round()
 		"월요일", "화요일", "수요일", "목요일", "금요일","토요일","일요일" };
 
 	enum days day = rand() % 7;
-	printf("< 5단계 문제 >\n");
-	printf("월요일부터 시작할때, %s은 몇번째 요일인지 구하시오 : \n", days_name[day]);
-	printf("( EX.수요일 -> 답: 3 ) ");
+	gotoxy(20, 2); printf("< 5단계 문제 >");
+	gotoxy(3, 4); printf("월요일부터 시작할때, %s은 몇번째 요일인지 구하시오 : ", days_name[day]);
+	gotoxy(3, 5); printf("( EX.수요일 -> 답: 3 ) ");
 	int ans, sol;
 	sol = day + 1;
 	scanf("%d", &ans);
@@ -187,9 +188,9 @@ void Sixth_Round()
 	strcpy(b3.name, "정세훈");
 	printf("name:%s\n\n", b3.name);
 
-	printf("< 6단계 문제 >\n");
-	printf("3명의 학생들의 평균을 구해보시오 : \n");
-	printf("( 점수 : level * score )  ");
+	gotoxy(20, 6); printf("< 6단계 문제 >");
+	gotoxy(5, 8); printf("3명의 학생들의 평균을 구해보시오 : \n");
+	gotoxy(5, 9); printf("( 점수 : level * score )  ");
 
 	float ans;
 	float sol = (4 * 4.2 + 2 * 4.4 + 3 * 4.3) / 3;
@@ -251,8 +252,8 @@ void Seventh_Round()
 	if (sol_area < 0)
 		sol_area = sol_area * -1;
 	
-	printf("< 7단계 문제 > \n");
-	printf("세 좌표로 둘러쌓인 삼각형의 넓이를 구하시오: ");
+	printf("\n\n              < 7단계 문제 >\n\n");
+	printf("    세 좌표로 둘러쌓인 삼각형의 넓이를 구하시오: ");
 	scanf("%d", &ans_area);
 	
 

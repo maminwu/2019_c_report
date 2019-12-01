@@ -153,25 +153,25 @@ int heart(int heartnum)
 	switch (heartnum) 
 	{
 	case 7:
-		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾");
+		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾\n");
 		break;
 	case 6:
-		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾");
+		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾\n");
 		break;
 	case 5:
-		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾");
+		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾\n");
 		break;
 	case 4:
-		printf("¢¾ ¢¾ ¢¾ ¢¾");
+		printf("¢¾ ¢¾ ¢¾ ¢¾\n");
 		break;
 	case 3:
-		printf("¢¾ ¢¾ ¢¾");
+		printf("¢¾ ¢¾ ¢¾\n");
 		break;
 	case 2:
-		printf("¢¾ ¢¾");
+		printf("¢¾ ¢¾\n");
 		break;
 	case 1:
-		printf("¢¾");
+		printf("¢¾\n");
 		break;
 	}
 	printf("\n");

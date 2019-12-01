@@ -134,7 +134,8 @@ int main()
 						roundcheck += 1;
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
-						printf("\n\n\n(원의 넓이) = (반지름) * (반지름) * 원주율(3.14)\n\n\n");
+						printf("\n\n\n일차함수 y=Mx+b 일때, (A,B)를 지나므로 B=M*A+b로 나타낼 수있다.\n");
+						printf("따라서 y절편 b= B-M*A 로 구할 수있다.\n\n\n");
 						if (sol_to_main == 3)
 							roundcheck += 1;
 						system("PAUSE");
@@ -162,7 +163,7 @@ int main()
 						roundcheck += 1;
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
-						printf("\n\n\n(원의 넓이) = (반지름) * (반지름) * 원주율(3.14)\n\n\n");
+						printf("\n\n\n월요일=1, 화요일=2, 수요일=3, 목요일=4, 금요일=5, 토요일=6, 일요일=7\n\n\n");
 						if (sol_to_main == 3)
 							roundcheck += 1;
 						system("PAUSE");
@@ -190,7 +191,7 @@ int main()
 						roundcheck += 1;
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
-						printf("\n\n\n(원의 넓이) = (반지름) * (반지름) * 원주율(3.14)\n\n\n");
+						printf("\n\n\n점수/학생 수이므로 (4 * 4.2 + 2 * 4.4 + 3 * 4.3) / 3로 구할 수있다.\n\n\n");
 						if (sol_to_main == 3)
 							roundcheck += 1;
 						system("PAUSE");
