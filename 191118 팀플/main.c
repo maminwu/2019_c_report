@@ -14,11 +14,9 @@ int main()
 		int roundcheck = 1;
 		int heartnum = 7;
 
-		//Check(trueorfalse);
 
 		if (menuCode == 0)
 		{
-
 			init_2();
 			new_name(0, 0);
 			FILE* fp = NULL;
@@ -35,7 +33,6 @@ int main()
 
 			while (1)
 			{
-
 				switch (roundcheck)
 				{
 				case 1:
@@ -54,7 +51,6 @@ int main()
 						if (sol_to_main == 3)
 							roundcheck += 1;
 						system("PAUSE");
-
 					}
 					else if (sol_to_main == 0)
 					{
@@ -234,7 +230,6 @@ int main()
 							Sleep(3000);
 							break; 
 						}
-
 				default:
 					break;
 					}

@@ -1,7 +1,5 @@
 #include "game.h"
 
-/* 함 수  구 현 */
-
 int keyControl()
 {
 	char temp = getch(); //getch()함수는 엔터안눌러도 키가 눌리면 바로 반환

@@ -4,8 +4,6 @@
 int right(float a, float s)
 {
 	int mathchecknum;
-	
-
 
 	if (a == s) {
 		setcolor(1, 0); printf("\n\n정답입니다.\n");
@@ -16,12 +14,10 @@ int right(float a, float s)
 	else {
 		setcolor(4, 0); printf("\n\n오답입니다. 5초 경과 후 실행됩니다.\n");
 		mathchecknum = 0;
-		Sleep(500);
+		Sleep(5000);
 		return mathchecknum;
 		system("PAUSE");
 	}
-
-
 }
 
 
