@@ -189,13 +189,15 @@ void Sixth_Round()
 	printf("name:%s\n\n", b3.name);
 
 	gotoxy(20, 6); printf("< 6단계 문제 >");
+	
 	gotoxy(5, 8); printf("3명의 학생들의 평균을 구해보시오 : \n");
 	gotoxy(5, 9); printf("( 점수 : level * score )  ");
 
 	float ans;
 	float sol = (4 * 4.2 + 2 * 4.4 + 3 * 4.3) / 3;
-	scanf("%.1f", &ans);
-
+	//printf("%f", sol);
+	scanf("%f", &ans);
+	
 	int truenum;
 	truenum = right(ans, sol);
 

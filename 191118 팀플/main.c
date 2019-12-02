@@ -42,7 +42,8 @@ int main()
 				case 1:
 					system("cls");
 					heart(heartnum);
-					trueorfalse = First_Round(); //1단계 게임
+					//trueorfalse = First_Round(); //1단계 게임
+					trueorfalse = Sixth_Round();
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2)
 					{
