@@ -4,7 +4,6 @@
 int main()
 {
 	init(); //콘솔창 크기조정 (가로,세로)
-	Cursor();
 	while (1)
 	{
 
@@ -28,7 +27,7 @@ int main()
 			int i;
 			float gap;
 			time_t startTime = 0, endTime = 0;
-			gotoxy(0, 27); printf("시간 측정을 시작합니다.");
+			setcolor(7, 0); gotoxy(0, 27); printf("시간 측정을 시작합니다.");
 			Sleep(500);
 			startTime = clock();
 			for (i = 1; i <= 100000000; i++) {}
@@ -256,13 +255,13 @@ int main()
 				}
 
 
-				gotoxy(15, 15); printf("시간 측정이 끝났습니다.");
+				setcolor(5, 0); gotoxy(15, 15); printf("시간 측정이 끝났습니다.");
 				gotoxy(15, 16); printf("측정 시간 : %.2f 초", gap);
 				gotoxy(15, 17); printf("도달 단계 : %d단계\n\n", roundcheck);
 				//PlaySound(NULL, 0, 0);
 
 				Sleep(1000);
-				printf("메인화면으로 이동합니다.");
+				setcolor(7, 0); printf("메인화면으로 이동합니다.");
 				system("PAUSE");
 				init();
 				titleDraw();

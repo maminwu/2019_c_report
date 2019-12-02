@@ -29,7 +29,7 @@ void titleDraw(void)
 	system("cls");
 	int x = 10; //타이틀 표시 x좌표
 	int y = 20; //타이틀 표시 y좌표
-	gotoxy(x, y + 0); printf("ooo        ooooo        .o.       ooooooooooooo  ooooo   ooooo            .oooooo.          .o.        ooo        ooooo  oooooooooooo"); Sleep(100);
+	setcolor(6,0); gotoxy(x, y + 0); printf("ooo        ooooo        .o.       ooooooooooooo  ooooo   ooooo            .oooooo.          .o.        ooo        ooooo  oooooooooooo"); Sleep(100); //연한노란색
 	gotoxy(x, y + 1); printf("`88.       .888'       .888.      8'   888   `8  `888'   `888'           d8P'  `Y8b        .888.       `88.       .888'  `888'     `8"); Sleep(100);
 	gotoxy(x, y + 2); printf(" 888b     d'888       .8'888.          888        888     888           888               .8'888.       888b     d'888    888 "); Sleep(100);
 	gotoxy(x, y + 3); printf(" 8 Y88. .P  888      .8' `888.         888        888ooooo888           888   ooooo      .8' `888.      8 Y88. .P  888    888ooooo8 "); Sleep(100);
@@ -42,14 +42,14 @@ void titleDraw(void)
 
 int menuDraw(void)
 {
-	gotoxy(110, 30); printf("- Made by. 정길연, 정민우, 정세훈");
+	setcolor(7, 0); gotoxy(110, 30); printf("- Made by. 정길연, 정민우, 정세훈"); //흰색
 
 	int x = 70;
 	int y = 32;
 
-	
-	setcolor(12,0); gotoxy(x - 2, y); printf("> 게임 시작"); //-2하는 이유는 >을 넣어야되서
-	setcolor(3, 0); gotoxy(x, y + 1); printf("게임 정보");
+
+	setcolor(7, 0); gotoxy(x - 2, y); printf("> 게임 시작"); //-2하는 이유는 >을 넣어야되서 
+	gotoxy(x, y + 1); printf("게임 정보");
 	gotoxy(x, y + 2); printf("순위 보기");
 	gotoxy(x, y + 3); printf("게임 종료");
 
@@ -95,26 +95,26 @@ int new_name(int x, int y) //사용자이름 입력
 	};
 	struct data student;
 
-	gotoxy(x + 10, y +5 ); printf(" [ 캐 릭 터 생 성 ] ");
+	setcolor(6, 0); gotoxy(x + 10, y +5 ); printf(" [ 캐 릭 터 생 성 ] ");
 
 
-	gotoxy(x + 10, y + 8); printf(" [ 학번을 적어주세요 ]");
-	gotoxy(x + 10, y + 9); printf(" 학번 : ");
+	setcolor(6, 0); gotoxy(x + 10, y + 8); printf(" [ 학번을 적어주세요 ]");
+	setcolor(7, 0); gotoxy(x + 10, y + 9); printf(" 학번 : ");
 	scanf("%d", &student.number);
 
-	gotoxy(x + 10, y + 11); printf(" [ 나이를 적어주세요 ]");
-	gotoxy(x + 10, y + 12); printf(" 나이 : ");
+	setcolor(6, 0); gotoxy(x + 10, y + 11); printf(" [ 나이를 적어주세요 ]");
+	setcolor(7, 0); gotoxy(x + 10, y + 12); printf(" 나이 : ");
 	scanf("%d", &student.age);
 
-	gotoxy(x + 10, y + 14); printf(" [ 이름을 적어주세요 ]");
-	gotoxy(x + 10, y + 15); printf(" 이름 : ");
+	setcolor(6, 0); gotoxy(x + 10, y + 14); printf(" [ 이름을 적어주세요 ]");
+	setcolor(7, 0); gotoxy(x + 10, y + 15); printf(" 이름 : ");
 	scanf("%s", student.name);
 
-	gotoxy(x + 10, y + 17); printf("[ 생성되었습니다 ]\n\n");
+	setcolor(6, 0); gotoxy(x + 10, y + 17); printf("[ 생성되었습니다 ]\n\n");
 
 	system("PAUSE");
 
-
+	
 
 	FILE* fp;
 	fp = fopen("Nickname.txt", "a");
@@ -136,7 +136,7 @@ void Help()
 
 	gotoxy(x, y); printf("    주어진 문제를 푸시오. 단계는 총 7단계입니다.");
 	gotoxy(x, y + 5); printf("-> 사용자 이름을 입력하면, 순위에 올라갈 수있습니다.");
-	gotoxy(x, y + 6); printf("-> 기회는 3번 주어집니다. 답을 틀렸을 시, 5초가 경과되고, 기회가 한 번씩 줄어들게 되며, 3번 실패시 자동종료됩니다.");
+	gotoxy(x, y + 6); printf("-> 답을 틀렸을 시, 5초가 경과되고, 기회가 한 번씩 줄어들게 되며, 7번 실패시 자동종료됩니다.");
 	gotoxy(x, y + 7); printf("-> 문제 풀이 도중 풀이는 1번 볼 수있으며, 답을 맞춘 후에는 풀이를 조건없이 열람가능합니다.");
 	gotoxy(x, y + 8); printf("-> 조작은 방향키와 엔터를 이용합니다. ( w(위) a(좌) s(아래) d(우)도 가능합니다. 입력이 안될 시 한/영에서 영어설정 )");
 	gotoxy(x, y + 11); printf("   **  엔터를 누르면 메인화면으로 이동합니다. **");
@@ -150,29 +150,29 @@ void Help()
 
 int heart(int heartnum)
 {
-	printf("목숨수 :");
+	setcolor(7, 0); printf("목숨수 :");
 	switch (heartnum) 
 	{
 	case 7:
-		printf("♥ ♥ ♥ ♥ ♥ ♥ ♥\n");
+		setcolor(5, 0); printf("♥ ♥ ♥ ♥ ♥ ♥ ♥\n");
 		break;
 	case 6:
-		printf("♥ ♥ ♥ ♥ ♥ ♥ ♡\n");
+		setcolor(5, 0); printf("♥ ♥ ♥ ♥ ♥ ♥ ♡\n");
 		break;
 	case 5:
-		printf("♥ ♥ ♥ ♥ ♥ ♡ ♡\n");
+		setcolor(5, 0); printf("♥ ♥ ♥ ♥ ♥ ♡ ♡\n");
 		break;
 	case 4:
-		printf("♥ ♥ ♥ ♥ ♡ ♡ ♡\n");
+		setcolor(5, 0); printf("♥ ♥ ♥ ♥ ♡ ♡ ♡\n");
 		break;
 	case 3:
-		printf("♥ ♥ ♥ ♡ ♡ ♡ ♡\n");
+		setcolor(5, 0); printf("♥ ♥ ♥ ♡ ♡ ♡ ♡\n");
 		break;
 	case 2:
-		printf("♥ ♥ ♡ ♡ ♡ ♡ ♡\n");
+		setcolor(5, 0); printf("♥ ♥ ♡ ♡ ♡ ♡ ♡\n");
 		break;
 	case 1:
-		printf("♥ ♡ ♡ ♡ ♡ ♡ ♡\n");
+		setcolor(5, 0); printf("♥ ♡ ♡ ♡ ♡ ♡ ♡\n");
 		break;
 	}
 	printf("\n");

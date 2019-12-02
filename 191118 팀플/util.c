@@ -23,17 +23,5 @@ void setcolor(unsigned short text, unsigned short back)
 {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), text | (back << 4));
 }
-	
-struct CONSOLE_CURSOR_INFO {
-	unsigned long dwSize; //커서 두께
-	int bVisible; //커서 보이기:1, 안 보이기 : 0
-};
-void Cursor() 
-{
-	CONSOLE_CURSOR_INFO c = { 0 };
-	c.dwSize = 1; //두께 : 1
-	c.bVisible = 0; //커서 숨기기
-	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &c); //커서 설정
-}
 
 
