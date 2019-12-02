@@ -176,6 +176,55 @@ int heart(int heartnum)
 	printf("\n");
 }
 
+void skull(int skullnum){
+	int skullswitch = skullnum;
+	if (skullswitch == 2|| skullswitch == 3|| skullswitch == 4|| skullswitch == 5 || skullswitch == 6 || skullswitch == 7)
+	{
+		gotoxy(50, 1); printf("                           ,--.\n");
+		gotoxy(50, 2); printf("                          {    }\n");
+		gotoxy(50, 3); printf("                          K,   }\n");
+		gotoxy(50, 4); printf("                         /  `Y`\n");
+	}
+	if (skullswitch == 3 || skullswitch == 4 || skullswitch == 5 || skullswitch == 6 || skullswitch == 7)
+	{
+		gotoxy(50, 5); printf("	                  /   /\n");
+		gotoxy(50, 6); printf("                   {_'-K.__/\n");
+		gotoxy(50, 7); printf("                     `/-.__L._\n");
+		gotoxy(50, 8); printf("                     /  ' /`\_}\n");
+	}
+	if (skullswitch == 4 || skullswitch == 5 || skullswitch == 6 || skullswitch == 7)
+	{
+		gotoxy(50, 9); printf("                    /  ' /\n");
+		gotoxy(50, 10); printf("            ____   /  ' /\n");
+		gotoxy(50, 11); printf("     ,-'~~~~    ~~/  ' /_\n");
+		gotoxy(50, 12); printf("   ,'             ``~~~%%',\n");
+	}
+	if (skullswitch == 5 || skullswitch == 6 || skullswitch == 7)
+	{	
+		gotoxy(50, 13); printf("  (                     %  Y\n");
+		gotoxy(50, 14); printf(" {                      %% I\n");
+		gotoxy(50, 15); printf("{      -                 %  `.\n");
+		gotoxy(50, 16); printf("|       ',                %  )\n");
+	}
+	if (skullswitch == 6 || skullswitch == 7)
+	{
+		gotoxy(50, 17); printf("|        |   ,..__      __. Y\n");
+		gotoxy(50, 18); printf("|    .,_./  Y ' / ^Y   J   )|\n");
+		gotoxy(50, 19); printf("\\           |' /   |   |   ||\n");
+		gotoxy(50, 20); printf(" \\          L_/    . _ (_,.'(\n");
+
+	}
+	if (skullswitch == 7)
+	{
+		gotoxy(50, 21); printf("  \\,   ,      ^^""' / |      )\n");
+		gotoxy(50, 22); printf("    \\_  \\          /,L]     /\n");
+		gotoxy(50, 23); printf("      '-_`-,       ` `   ./`\n");
+	}
+
+	
+	
+	
+}
 void viewlog()
 {
 	system("cls");

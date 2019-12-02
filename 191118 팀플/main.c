@@ -37,6 +37,8 @@ int main()
 				{
 				case 1:
 					system("cls");
+					//skull(7); 테스트
+					system("PAUSE");
 					heart(heartnum);
 					trueorfalse = First_Round(); //1단계 게임
 					//trueorfalse = Sixth_Round(); 라운드 테스트하는곳
@@ -68,6 +70,7 @@ int main()
 
 				case 2:
 					system("cls");
+					skull(roundcheck);
 					heart(heartnum);
 					trueorfalse = Second_Round(); //2단계 게임 
 					sol_to_main = Check(trueorfalse);
@@ -96,6 +99,7 @@ int main()
 
 				case 3:
 					system("cls");
+					skull(roundcheck);
 					heart(heartnum);
 					trueorfalse = Third_Round(); //3단계 게임
 					sol_to_main = Check(trueorfalse);
@@ -124,6 +128,7 @@ int main()
 
 				case 4:
 					system("cls");
+					skull(roundcheck);
 					heart(heartnum);
 					trueorfalse = Forth_Round(); //4단계 게임
 					sol_to_main = Check(trueorfalse);
@@ -153,6 +158,7 @@ int main()
 
 				case 5:
 					system("cls");
+					skull(roundcheck);
 					heart(heartnum);
 					trueorfalse = Fifth_Round(); //5단계 게임
 					sol_to_main = Check(trueorfalse);
@@ -181,6 +187,7 @@ int main()
 
 				case 6:
 					system("cls");
+					skull(roundcheck);
 					heart(heartnum);
 					trueorfalse = Sixth_Round(); //6단계 게임
 					sol_to_main = Check(trueorfalse);
@@ -208,6 +215,7 @@ int main()
 					break;
 				case 7:
 					system("cls");
+					skull(roundcheck);
 					heart(heartnum);
 					trueorfalse = Seventh_Round(); //7단계 게임
 					sol_to_main = Check(trueorfalse);

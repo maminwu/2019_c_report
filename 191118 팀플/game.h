@@ -25,4 +25,4 @@ int menuDraw(void); //메인메뉴
 void Help();
 int new_name(int x, int y);
 void viewlog(); // 점수 보기 함수
-
+void skull(int skullnum);
