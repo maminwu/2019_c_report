@@ -42,8 +42,8 @@ int main()
 				case 1:
 					system("cls");
 					heart(heartnum);
-					//trueorfalse = First_Round(); //1단계 게임
-					trueorfalse = Sixth_Round();
+					trueorfalse = First_Round(); //1단계 게임
+					//trueorfalse = Sixth_Round(); 라운드 테스트하는곳
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2)
 					{

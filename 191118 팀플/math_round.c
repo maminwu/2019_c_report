@@ -4,6 +4,8 @@
 int right(float a, float s)
 {
 	int mathchecknum;
+	
+
 
 	if (a == s) {
 		printf("\n\n정답입니다.\n");
@@ -195,6 +197,8 @@ void Sixth_Round()
 
 	float ans;
 	float sol = (4 * 4.2 + 2 * 4.4 + 3 * 4.3) / 3;
+	sol = (int)(sol * 100);
+	sol = sol / 100;
 	//printf("%f", sol);
 	scanf("%f", &ans);
 	
