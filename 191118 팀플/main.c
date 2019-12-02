@@ -38,7 +38,6 @@ int main()
 				case 1:
 					system("cls");
 					//skull(7); 테스트
-					system("PAUSE");
 					heart(heartnum);
 					trueorfalse = First_Round(); //1단계 게임
 					//trueorfalse = Sixth_Round(); 라운드 테스트하는곳

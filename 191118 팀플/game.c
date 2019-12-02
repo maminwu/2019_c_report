@@ -148,29 +148,29 @@ void Help()
 
 int heart(int heartnum)
 {
-	setcolor(7, 0); printf("格见荐 :");
+	setcolor(7, 0); gotoxy(0,0); printf("格见荐 :");
 	switch (heartnum) 
 	{
 	case 7:
-		setcolor(5, 0); printf("⒕ ⒕ ⒕ ⒕ ⒕ ⒕ ⒕\n");
+		setcolor(5, 0); gotoxy(0, 0); printf("⒕ ⒕ ⒕ ⒕ ⒕ ⒕ ⒕\n");
 		break;
 	case 6:
-		setcolor(5, 0); printf("⒕ ⒕ ⒕ ⒕ ⒕ ⒕ ⒔\n");
+		setcolor(5, 0); gotoxy(0, 0); printf("⒕ ⒕ ⒕ ⒕ ⒕ ⒕ ⒔\n");
 		break;
 	case 5:
-		setcolor(5, 0); printf("⒕ ⒕ ⒕ ⒕ ⒕ ⒔ ⒔\n");
+		setcolor(5, 0); gotoxy(0, 0); printf("⒕ ⒕ ⒕ ⒕ ⒕ ⒔ ⒔\n");
 		break;
 	case 4:
-		setcolor(5, 0); printf("⒕ ⒕ ⒕ ⒕ ⒔ ⒔ ⒔\n");
+		setcolor(5, 0); gotoxy(0, 0); printf("⒕ ⒕ ⒕ ⒕ ⒔ ⒔ ⒔\n");
 		break;
 	case 3:
-		setcolor(5, 0); printf("⒕ ⒕ ⒕ ⒔ ⒔ ⒔ ⒔\n");
+		setcolor(5, 0); gotoxy(0, 0); printf("⒕ ⒕ ⒕ ⒔ ⒔ ⒔ ⒔\n");
 		break;
 	case 2:
-		setcolor(5, 0); printf("⒕ ⒕ ⒔ ⒔ ⒔ ⒔ ⒔\n");
+		setcolor(5, 0); gotoxy(0, 0); printf("⒕ ⒕ ⒔ ⒔ ⒔ ⒔ ⒔\n");
 		break;
 	case 1:
-		setcolor(5, 0); printf("⒕ ⒔ ⒔ ⒔ ⒔ ⒔ ⒔\n");
+		setcolor(5, 0); gotoxy(0, 0); printf("⒕ ⒔ ⒔ ⒔ ⒔ ⒔ ⒔\n");
 		break;
 	}
 	printf("\n");
