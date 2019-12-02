@@ -157,22 +157,22 @@ int heart(int heartnum)
 		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾\n");
 		break;
 	case 6:
-		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾\n");
+		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢½\n");
 		break;
 	case 5:
-		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾\n");
+		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢¾ ¢½ ¢½\n");
 		break;
 	case 4:
-		printf("¢¾ ¢¾ ¢¾ ¢¾\n");
+		printf("¢¾ ¢¾ ¢¾ ¢¾ ¢½ ¢½ ¢½\n");
 		break;
 	case 3:
-		printf("¢¾ ¢¾ ¢¾\n");
+		printf("¢¾ ¢¾ ¢¾ ¢½ ¢½ ¢½ ¢½\n");
 		break;
 	case 2:
-		printf("¢¾ ¢¾\n");
+		printf("¢¾ ¢¾ ¢½ ¢½ ¢½ ¢½ ¢½\n");
 		break;
 	case 1:
-		printf("¢¾\n");
+		printf("¢¾ ¢½ ¢½ ¢½ ¢½ ¢½ ¢½\n");
 		break;
 	}
 	printf("\n");
