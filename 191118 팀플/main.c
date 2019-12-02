@@ -212,7 +212,7 @@ int main()
 					trueorfalse = Seventh_Round(); //7단계 게임
 					sol_to_main = Check(trueorfalse);
 					if (sol_to_main == 2)
-						roundcheck += 1;
+						system("cls");
 					else if (sol_to_main == 1 || sol_to_main == 3)
 					{
 						printf("\n\n\n(좌표가 주어졌을 때 삼각형의 넓이) = | 1/2( p1x p3x p2x p1x )|\n");
