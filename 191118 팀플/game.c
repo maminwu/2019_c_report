@@ -118,7 +118,7 @@ int new_name(int x, int y) //사용자이름 입력
 	fp = fopen("Nickname.txt", "a");
 	if (fp != NULL) 
 	{
-		fprintf(fp, "%d/ %d/ %s\n", student.number,student.age, student.name);
+		fprintf(fp, "%d/ %d/ %s/ %s/ %s\n", student.number,student.age, student.name, __DATE__, __TIME__);
 	}
 	fclose(fp);
 

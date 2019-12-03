@@ -39,9 +39,9 @@ void First_Round()
 	setcolor(7, 0); gotoxy(5, 4); printf("소수점은 셋째자리부터 버려, 둘째자리까지 나타내시오.)");
 	gotoxy(5, 5); printf("' (%d × %d) ÷ %d ' 을 구하시오 : ", f_multiply, s_multiply, divide);
 	scanf("%f", &ans);
-	sol = ((f_multiply * s_multiply) / (divide * 1.0)); //1.0f를 곱해야 소수점까지 계산 가능
+	sol = (MULTIPLE(f_multiply, s_multiply) / (divide * 1.0)); //1.0f를 곱해야 소수점까지 계산 가능
 
-	sol = (int)(sol * 100);
+	sol = (int)(MULTIPLE(sol,100));
 	sol = sol / 100;
 
 	//printf("내가 적은 답 %f\n", answer); 값 확인
@@ -94,7 +94,7 @@ void Third_Round()
 	
 	scanf("%f", &ans);
 
-	sol = radius * radius * 3.14;
+	sol = MULTIPLE(SQUARE(radius), 3.14);
 
 	truenum = right(ans, sol);
 	return truenum;
@@ -125,7 +125,7 @@ void Forth_Round()
 	setcolor(7, 0); gotoxy(3, 4); printf(" (%d, %d), 기울기 : 2 일때, y절편을 구하여라: ", A, B);
 
 	int ans, sol;
-	sol = B - (M * A);
+	sol = B - MULTIPLE(M,A);
 	scanf("%d", &ans);
 
 	truenum = right(ans, sol);
@@ -194,8 +194,8 @@ void Sixth_Round()
 	gotoxy(5, 9); printf("( 점수 : level * score, 소수점 둘째자리까지 나타내시오 )  ");
 
 	float ans;
-	float sol = (4 * 4.2 + 2 * 4.4 + 3 * 4.3) / 3;
-	sol = (int)(sol * 100);
+	float sol = (MULTIPLE(4,4.2) + MULTIPLE(2, 4.4) + MULTIPLE(3, 4.3)) / 3;
+	sol = (int)(MULTIPLE(sol, 100));
 	sol = sol / 100;
 	scanf("%f", &ans);
 	
@@ -250,7 +250,7 @@ void Seventh_Round()
 		else
 			break;
 	}
-	sol_area = ((r.p1.x * r.p3.y + r.p3.x * r.p2.y + r.p2.x * r.p1.y) - (r.p1.x * r.p2.y + r.p2.x * r.p3.y + r.p1.x)) / 2;
+	sol_area = (MULTIPLE(r.p1.x, r.p3.y) + MULTIPLE(r.p3.x, r.p2.y) + MULTIPLE(r.p2.x, r.p1.y)) - ((MULTIPLE(r.p1.x, r.p2.y) + MULTIPLE(r.p2.x, r.p3.y) + MULTIPLE(r.p3.x, r.p1.y))) / 2;
 
 	if (sol_area < 0)
 		sol_area = sol_area * -1;
