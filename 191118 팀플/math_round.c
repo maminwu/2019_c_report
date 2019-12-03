@@ -3,7 +3,9 @@
 
 int right(float a, float s)
 {
+	int *mathcheck;
 	int mathchecknum;
+	mathcheck = &mathchecknum; 
 
 	if (a == s) {
 		setcolor(1, 0); printf("\n\n정답입니다.\n");
@@ -235,7 +237,7 @@ void Seventh_Round()
 	{
 		if (((r.p2.y - r.p1.y) / (r.p2.x - r.p1.x)) == ((r.p3.y - r.p1.y) / (r.p3.x - r.p1.x)) == ((r.p2.y - r.p3.y) / (r.p2.x - r.p3.x)))
 		{
-			printf("다시 입력하시오\n");
+			printf("\n세 점이 한 직선 위에 있습니다. 다시 입력하시오\n");
 			printf("좌표를 입력하시오:");
 			scanf("%d %d", &r.p1.x, &r.p1.y);
 

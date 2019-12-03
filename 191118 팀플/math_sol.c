@@ -2,9 +2,7 @@
 
 int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기 
 {
-
-	int x = 7, y = 16;
-
+	int x = 7, y = 19;
 
 	if (checknum == 0) //오답입니다.
 	{
@@ -12,13 +10,11 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 		setcolor(7, 0); gotoxy(x - 2, y); printf("> 다시 하기");
 		gotoxy(x, y + 1); printf("풀이 보기\n\n");
 
-		while (1)
-		{
-			int n = keyControl(); //키보드이벤트를 키값으로 받아오기
-			switch (n)
-			{
+		while (1){
+			int n = keyControl(); 
+			switch (n){
 			case UP: {
-				if (y > 16) //계속 못올라가게
+				if (y > 19) //계속 못올라가게
 				{
 					gotoxy(x - 2, y); //'>'을 두칸 이전에 출력하려고
 					printf(" "); //원래 위치 지우기
@@ -27,7 +23,7 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 				}
 				break; }
 			case DOWN: {
-				if (y < 17) //계속 못내려가게
+				if (y < 20) //계속 못내려가게
 				{
 					gotoxy(x - 2, y);
 					printf(" ");
@@ -35,9 +31,8 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 					printf(">");
 				}
 				break; }
-			case SUBMIT:
-			{ 
-				return y - 16; 
+			case SUBMIT:{ 
+				return y - 19; 
 			}
 			}
 		}
@@ -56,7 +51,7 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 			switch (n)
 			{
 			case UP: {
-				if (y > 16) //계속 못올라가게
+				if (y > 19) //계속 못올라가게
 				{
 					gotoxy(x - 2, y); //'>'을 두칸 이전에 출력하려고
 					printf(" "); //원래 위치 지우기
@@ -65,7 +60,7 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 				}
 				break; }
 			case DOWN: {
-				if (y <17) //계속 못내려가게
+				if (y <20) //계속 못내려가게
 				{
 					gotoxy(x - 2, y);
 					printf(" ");
@@ -75,7 +70,7 @@ int Check(int checknum) //정답,오답에 따라 선택지 나오게 하기
 				break; }
 			case SUBMIT:
 			{ 
-				return y - 14;
+				return y - 17;
 			}
 			}
 		}
